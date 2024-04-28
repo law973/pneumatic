@@ -1,16 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-/* html {
-	box-sizing: border-box;
-} */
+html {
+	/* box-sizing: border-box; */
+	scroll-behavior: smooth;
+}
 
 body {
 	font-family: Nunito, sans-serif;
 	text-align: center;
 	min-height: 100vh;
 	background-color: #FF8C00;
-	color: #FFFFFF;
+	color: #FFF;
 	margin: 0;
+}
+
+a:link {
+	color: #FFF;
 }
 
 #greeting {
@@ -36,30 +41,49 @@ body {
 
 }
 
-/* Tooltip text */
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+/* tooltip text */
 .tooltip .tooltiptext {
 	visibility: hidden;
 	width: 150px;
+	top: 100%;
+	left: 50%;
+	margin-left: -75px;
 	background-color: black;
 	color: #fff;
 	font-size: x-large;
 	text-align: center;
 	padding: 5px 0;
 	border-radius: 6px;
-   
-	/* Position the tooltip text - see examples below! */
+
 	position: absolute;
 	z-index: 1;
   }
   
-  /* Show the tooltip text when you mouse over the tooltip container */
+  /* show tooltip text when you mouse over tooltip container */
   .tooltip:hover .tooltiptext {
 	visibility: visible;
+  }
+
+  .tooltip .tooltiptext::after {
+	content: " ";
+	position: absolute;
+	bottom: 100%;  /* at top of tooltip */
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent transparent black transparent;
   }
 
 #greeting_arrow {
 	position: absolute;
 	bottom: 0;
+	animation: move 1.25s ease-in-out infinite alternate;
 }
 
 #arrow {
@@ -71,6 +95,15 @@ body {
 
 #arrow:hover {
 	cursor: pointer;
+}
+
+@keyframes move {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(0, -33%);
+	}
 }
 
 #introduction {
