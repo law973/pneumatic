@@ -78,7 +78,7 @@
 	<div id="tools">
 		<h1>Tools</h1>
 			<h2>TDEE Calculator</h2>
-				<form action="">
+				<form id="form_tdee">
 					<fieldset>
 						<legend>Gender</legend>
 						<input type="radio" id="gender_m" name="gender" value="male">
@@ -88,8 +88,55 @@
 					</fieldset><br>
 
 					<label for="age">Age</label>
-					<input type="number" id="age" name="age" min="0" required>
+					<input type="number" id="age" name="age" min="0" required><br>
 
+					<label for="weight">Weight</label>
+					<input type="number" id="weight" min="0" required><br>
+
+					<label for="height">Height</label>
+					<select name="height" id="height">
+						<option value="height_4_7">4ft 7in</option>
+						<option value="height_4_8">4ft 8in</option>
+						<option value="height_4_9">4ft 9in</option>
+						<option value="height_4_10">4ft 10in</option>
+						<option value="height_4_11">4ft 11in</option>
+						<option value="height_5_0">5ft 0in</option>
+						<option value="height_5_1">5ft 1in</option>
+						<option value="height_5_2">5ft 2in</option>
+						<option value="height_5_3">5ft 3in</option>
+						<option value="height_5_4">5ft 4in</option>
+						<option value="height_5_5">5ft 5in</option>
+						<option value="height_5_6">5ft 6in</option>
+						<option value="height_5_7">5ft 7in</option>
+						<option value="height_5_8">5ft 8in</option>
+						<option value="height_5_9">5ft 9in</option>
+						<option value="height_5_10">5ft 10in</option>
+						<option value="height_5_11">5ft 11in</option>
+						<option value="height_6_0">6ft 0in</option>
+						<option value="height_6_1">6ft 1in</option>
+						<option value="height_6_2">6ft 2in</option>
+						<option value="height_6_3">6ft 3in</option>
+						<option value="height_6_4">6ft 4in</option>
+						<option value="height_6_5">6ft 5in</option>
+						<option value="height_6_6">6ft 6in</option>
+						<option value="height_6_7">6ft 7in</option>
+						<option value="height_6_8">6ft 8in</option>
+						<option value="height_6_9">6ft 9in</option>
+						<option value="height_6_10">6ft 10in</option>
+						<option value="height_6_11">6ft 11in</option>
+						<option value="height_7_0">7ft 0in</option>
+					</select><br>
+
+					<label for="activity">Activity</label>
+					<select name="activity" id="activity">
+						<option value="activity_sedentary">Sedentary (office job)</option>
+						<option value="activity_light">Light Exercise (1-2 days/week)</option>
+						<option value="activity_moderate">Moderate Exercise (3-5 days/week)</option>
+						<option value="activity_heavy">Heavy Exercise (6-7 days/week)</option>
+						<option value="activity_athlete">Athlete (2x per day)</option>
+					</select><br><br>
+
+					<input type="submit" value="Calculate">
 					
 				</form>
 			<h2>Calorie Goal</h2>

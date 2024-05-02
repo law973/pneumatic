@@ -9,13 +9,13 @@ body {
 	font-family: Nunito, sans-serif;
 	text-align: center;
 	min-height: 100vh;
-	background-color: #FF8C00;
-	color: #FFF;
+	background-color: #0070ff;
+	color: #fffcf9;
 	margin: 0;
 }
 
 a:link {
-	color: #FFF;
+	color: #fffcf9;
 }
 
 #greeting {
@@ -54,7 +54,7 @@ a:link {
 	left: 50%;
 	margin-left: -75px;
 	background-color: black;
-	color: #fff;
+	color: #fffcf9;
 	font-size: x-large;
 	text-align: center;
 	padding: 5px 0;
@@ -107,6 +107,50 @@ a:link {
 }
 
 #introduction {
+	height: 100vh;
+	width: 100vw;
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#diet {
+	height: 100vh;
+	width: 100vw;
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #35ce8d;
+	color: #352d39;
+}
+
+#exercise {
+	height: 100vh;
+	width: 100vw;
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-color: #f03a47;
+	color: #352d39;
+}
+
+#recovery {
+	height: 100vh;
+	width: 100vw;
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#tools {
 	height: 100vh;
 	width: 100vw;
 	max-width: 100%;
