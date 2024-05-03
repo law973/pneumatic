@@ -9,13 +9,13 @@ body {
 	font-family: Nunito, sans-serif;
 	text-align: center;
 	min-height: 100vh;
-	background-color: #0070ff;
-	color: #fffcf9;
+	background-color: #0000ff;
+	color: #fff;
 	margin: 0;
 }
 
 a:link {
-	color: #fffcf9;
+	color: #fff;
 }
 
 #greeting {
@@ -53,8 +53,8 @@ a:link {
 	top: 100%;
 	left: 50%;
 	margin-left: -75px;
-	background-color: black;
-	color: #fffcf9;
+	background-color: #000;
+	color: #fff;
 	font-size: x-large;
 	text-align: center;
 	padding: 5px 0;
@@ -77,7 +77,7 @@ a:link {
 	margin-left: -5px;
 	border-width: 5px;
 	border-style: solid;
-	border-color: transparent transparent black transparent;
+	border-color: transparent transparent #000 transparent;
   }
 
 #greeting_arrow {
@@ -124,8 +124,8 @@ a:link {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: #35ce8d;
-	color: #352d39;
+	background-color: #06d6a0;
+	color: #000;
 }
 
 #exercise {
@@ -136,8 +136,24 @@ a:link {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: #f03a47;
-	color: #352d39;
+	background-color: #880d1e;
+	color: #fff;
+}
+
+.diet_icon {
+	fill: #000;
+}
+
+.exercise_icon {
+	fill: #fff;
+}
+
+.recovery_icon {
+	fill: #000;
+}
+
+.tools_icon {
+	fill: #000;
 }
 
 #recovery {
@@ -148,6 +164,8 @@ a:link {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	background-color: #bbbdf6;
+	color: #000;
 }
 
 #tools {
@@ -158,4 +176,6 @@ a:link {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	background-color: #fec601;
+	color: #000;
 }
