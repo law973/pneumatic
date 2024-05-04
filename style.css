@@ -1,5 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+:root {
+	--bg-color-main: #0000ff;
+	--bg-color-diet: #06d6a0;
+	--bg-color-exercise: #880d1e;
+	--bg-color-recovery: #bbbdf6;
+	--bg-color-tools: #fec601;
+	--text-color-white: #fff;
+	--text-color-black: #000;
+	--text-color-tooltip: #000;
+	--text-color-link: #fff;
+	--tooltip-color: #fff;
+	--icon-color-white: #fff;
+	--icon-color-black: #000;
+}
+
+[data-theme="dark"] {
+	--bg-color-main: #121212;
+	--bg-color-diet: #06d6a0;
+	--bg-color-exercise: #880d1e;
+	--bg-color-recovery: #bbbdf6;
+	--bg-color-tools: #fec601;
+	--text-color-white: #d7dadc;
+	--text-color-black: #000;
+	--text-color-tooltip: #121212;
+	--text-color-link: #bb86fc;
+	--tooltip-color: #bb86fc;
+	--icon-color-white: #fff;
+	--icon-color-black: #000;
+}
+
 html {
 	/* box-sizing: border-box; */
 	scroll-behavior: smooth;
@@ -9,13 +39,13 @@ body {
 	font-family: Nunito, sans-serif;
 	text-align: center;
 	min-height: 100vh;
-	background-color: #0000ff;
-	color: #fff;
+	background-color: var(--bg-color-main);
+	color: var(--text-color-white);
 	margin: 0;
 }
 
 a:link {
-	color: #fff;
+	color: var(--text-color-link);
 }
 
 #greeting {
@@ -53,8 +83,8 @@ a:link {
 	top: 100%;
 	left: 50%;
 	margin-left: -75px;
-	background-color: #000;
-	color: #fff;
+	background-color: var(--tooltip-color);
+	color: var(--text-color-tooltip);
 	font-size: x-large;
 	text-align: center;
 	padding: 5px 0;
@@ -77,7 +107,7 @@ a:link {
 	margin-left: -5px;
 	border-width: 5px;
 	border-style: solid;
-	border-color: transparent transparent #000 transparent;
+	border-color: transparent transparent var(--tooltip-color) transparent;
   }
 
 #greeting_arrow {
@@ -124,8 +154,8 @@ a:link {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: #06d6a0;
-	color: #000;
+	background-color: var(--bg-color-diet);
+	color: var(--text-color-black);
 }
 
 #exercise {
@@ -136,24 +166,24 @@ a:link {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: #880d1e;
-	color: #fff;
+	background-color: var(--bg-color-exercise);
+	color: var(--text-color-white);
 }
 
 .diet_icon {
-	fill: #000;
+	fill: var(--icon-color-black);
 }
 
 .exercise_icon {
-	fill: #fff;
+	fill: var(--icon-color-white);
 }
 
 .recovery_icon {
-	fill: #000;
+	fill: var(--icon-color-black);
 }
 
 .tools_icon {
-	fill: #000;
+	fill: var(--icon-color-black);
 }
 
 #recovery {
@@ -164,8 +194,8 @@ a:link {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: #bbbdf6;
-	color: #000;
+	background-color: var(--bg-color-recovery);
+	color: var(--text-color-black);
 }
 
 #tools {
@@ -176,6 +206,6 @@ a:link {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-color: #fec601;
-	color: #000;
+	background-color: var(--bg-color-tools);
+	color: var(--text-color-black);
 }
