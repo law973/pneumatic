@@ -3,27 +3,24 @@ const sunIcon = document.getElementById('sun_icon');
 const moonIcon = document.getElementById('moon_icon');
 let form = document.getElementById("form_tdee");
 
-// Light Mode Styles
-function lightMode() {
+function lightTheme() {
     sunIcon.style.visibility = "hidden";
     moonIcon.style.visibility = "visible";
 }
 
-// Dark Mode Styles
-function darkMode() {
+function darkTheme() {
     moonIcon.style.visibility = "hidden";
     sunIcon.style.visibility = "visible";
 }
 
-// Switch Theme
 function switchTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     if (!currentTheme || currentTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'dark');
-        darkMode();
+        darkTheme();
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
-        lightMode();
+        lightTheme();
     }
 }
 

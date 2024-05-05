@@ -8,11 +8,16 @@
 	--bg-color-tools: #fec601;
 	--text-color-white: #fff;
 	--text-color-black: #000;
+	--text-color-pneumatic: #fff;
 	--text-color-tooltip: #000;
 	--text-color-link: #fff;
 	--tooltip-color: #fff;
 	--icon-color-white: #fff;
 	--icon-color-black: #000;
+	--icon-color-diet: #000;
+	--icon-color-exercise: #fff;
+	--icon-color-recovery: #000;
+	--icon-color-tools: #000;
 }
 
 [data-theme="dark"] {
@@ -23,19 +28,12 @@
 	--bg-color-tools: #fec601;
 	--text-color-white: #d7dadc;
 	--text-color-black: #000;
+	--text-color-pneumatic: #bb86fc;
 	--text-color-tooltip: #121212;
 	--text-color-link: #bb86fc;
 	--tooltip-color: #bb86fc;
-	--icon-color-white: #bbbdf6;
+	--icon-color-white: #fff;
 	--icon-color-black: #000;
-}
-
-#sun_icon, #moon_icon {
-	fill: var(--icon-color-white);
-}
-
-#sun_icon {
-	visibility: hidden;
 }
 
 html {
@@ -52,15 +50,34 @@ body {
 	margin: 0;
 }
 
-#theme-switcher {
-	position: -webkit-sticky;
-	position: sticky;
-  	top: 10px;
+p {
+	max-width: 50ch;
+	text-align: left;
 }
 
 a:link {
 	color: var(--text-color-link);
 }
+
+/* || LIGHT & DARK THEME SWITCHER */
+
+#theme-switcher {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	border: 1px solid rgba(255, 255, 255);
+	border-radius: 25%;
+}
+
+#sun_icon, #moon_icon {
+	fill: var(--icon-color-white);
+}
+
+#sun_icon {
+	visibility: hidden;
+}
+
+/* || GREETING PAGE STYLING */
 
 #greeting {
 	height: 100vh;
@@ -108,18 +125,24 @@ a:link {
 	animation-delay: 1.2s;
 }
 
-@keyframes helloMove {
-	to {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
-
 #greeting_welcome {
 	/* fallback font-size*/
 	font-size: 3em;
 	font-size: 2vmax;
 
+}
+
+#greeting_arrow {
+	position: absolute;
+	bottom: 0;
+	animation: arrowMove 1.25s ease-in-out infinite alternate;
+}
+
+#arrow {
+	/* fallback width */
+	width: 102px;
+	width: 4vmax;
+	height: auto;
 }
 
 .tooltip {
@@ -161,17 +184,11 @@ a:link {
 	border-color: transparent transparent var(--tooltip-color) transparent;
   }
 
-#greeting_arrow {
-	position: absolute;
-	bottom: 0;
-	animation: arrowMove 1.25s ease-in-out infinite alternate;
-}
-
-#arrow {
-	/* fallback width */
-	width: 102px;
-	width: 4vmax;
-	height: auto;
+@keyframes helloMove {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes arrowMove {
@@ -183,10 +200,7 @@ a:link {
 	}
 }
 
-p {
-	width: 50ch;
-	text-align: left;
-}
+/* || INTRODUCTION PAGE STYLING */
 
 #introduction {
 	height: 100vh;
@@ -198,17 +212,34 @@ p {
 	flex-direction: column;
 }
 
+/* || DIET PAGE STYLING */
+
 #diet {
 	height: 100vh;
 	width: 100vw;
 	max-width: 100%;
 	display: flex;
-	justify-content: center;
 	align-items: center;
+	justify-content: center;
 	flex-direction: column;
 	background-color: var(--bg-color-diet);
 	color: var(--text-color-black);
 }
+
+#diet_content {
+	padding: 0 25px;
+	border: 3px solid rgba(0, 0, 0, .5);
+	border-radius: 25px;
+	/* fallback font-size*/
+	font-size: 3em;
+	font-size: 1vmax;
+}
+
+.diet_icon {
+	fill: var(--icon-color-black);
+}
+
+/* || EXERCISE PAGE STYLING */
 
 #exercise {
 	height: 100vh;
@@ -222,21 +253,20 @@ p {
 	color: var(--text-color-white);
 }
 
-.diet_icon {
-	fill: var(--icon-color-black);
+#exercise_content {
+	padding: 0 25px;
+	border: 3px solid rgba(255, 255, 255, .5);
+	border-radius: 25px;
+	/* fallback font-size*/
+	font-size: 3em;
+	font-size: 1vmax;
 }
 
 .exercise_icon {
 	fill: var(--icon-color-white);
 }
 
-.recovery_icon {
-	fill: var(--icon-color-black);
-}
-
-.tools_icon {
-	fill: var(--icon-color-black);
-}
+/* || RECOVERY PAGE STYLING */
 
 #recovery {
 	height: 100vh;
@@ -250,6 +280,12 @@ p {
 	color: var(--text-color-black);
 }
 
+.recovery_icon {
+	fill: var(--icon-color-black);
+}
+
+/* || TOOLS PAGE STYLING */
+
 #tools {
 	height: 100vh;
 	width: 100vw;
@@ -260,4 +296,8 @@ p {
 	flex-direction: column;
 	background-color: var(--bg-color-tools);
 	color: var(--text-color-black);
+}
+
+.tools_icon {
+	fill: var(--icon-color-black);
 }
