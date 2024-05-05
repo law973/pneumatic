@@ -26,8 +26,16 @@
 	--text-color-tooltip: #121212;
 	--text-color-link: #bb86fc;
 	--tooltip-color: #bb86fc;
-	--icon-color-white: #fff;
+	--icon-color-white: #bbbdf6;
 	--icon-color-black: #000;
+}
+
+#sun_icon, #moon_icon {
+	fill: var(--icon-color-white);
+}
+
+#sun_icon {
+	visibility: hidden;
 }
 
 html {
@@ -42,6 +50,12 @@ body {
 	background-color: var(--bg-color-main);
 	color: var(--text-color-white);
 	margin: 0;
+}
+
+#theme-switcher {
+	position: -webkit-sticky;
+	position: sticky;
+  	top: 10px;
 }
 
 a:link {
@@ -62,6 +76,43 @@ a:link {
 	/* fallback font-size*/
 	font-size: 6em;
 	font-size: 4vmax;
+}
+
+#greeting_hello span {
+	opacity: 0;
+	transform: translateY(2em);
+	animation: helloMove 0.5s forwards;
+}
+
+#greeting_hello span:nth-child(1) {
+	animation-delay: 0.2s;
+}
+  
+#greeting_hello span:nth-child(2) {
+	animation-delay: 0.4s;
+}
+  
+#greeting_hello span:nth-child(3) {
+	animation-delay: 0.6s;
+}
+
+#greeting_hello span:nth-child(4) {
+	animation-delay: 0.8s;
+}
+  
+#greeting_hello span:nth-child(5) {
+	animation-delay: 1s;
+}
+  
+#greeting_hello span:nth-child(6) {
+	animation-delay: 1.2s;
+}
+
+@keyframes helloMove {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 #greeting_welcome {
@@ -113,7 +164,7 @@ a:link {
 #greeting_arrow {
 	position: absolute;
 	bottom: 0;
-	animation: move 1.25s ease-in-out infinite alternate;
+	animation: arrowMove 1.25s ease-in-out infinite alternate;
 }
 
 #arrow {
@@ -123,17 +174,18 @@ a:link {
 	height: auto;
 }
 
-#arrow:hover {
-	cursor: pointer;
-}
-
-@keyframes move {
+@keyframes arrowMove {
 	0% {
 		transform: translate(0, 0);
 	}
 	100% {
 		transform: translate(0, -33%);
 	}
+}
+
+p {
+	width: 50ch;
+	text-align: left;
 }
 
 #introduction {
