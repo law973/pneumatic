@@ -18,22 +18,36 @@
 	--icon-color-exercise: #fff;
 	--icon-color-recovery: #000;
 	--icon-color-tools: #000;
+	--outline-color-intro: rgba(255, 255, 255, .5);
+	--outline-color-diet: rgba(0, 0, 0, .5);
+	--outline-color-exercise: rgba(255, 255, 255, .5);
+	--outline-color-recovery: rgba(0, 0, 0, .5);
+	--outline-color-tools: rgba(0, 0, 0, .5);
 }
 
 [data-theme="dark"] {
 	--bg-color-main: #121212;
-	--bg-color-diet: #06d6a0;
-	--bg-color-exercise: #880d1e;
-	--bg-color-recovery: #bbbdf6;
-	--bg-color-tools: #fec601;
+	--bg-color-diet: #121212;
+	--bg-color-exercise: #121212;
+	--bg-color-recovery: #121212;
+	--bg-color-tools: #121212;
 	--text-color-white: #d7dadc;
-	--text-color-black: #000;
+	--text-color-black: #d7dadc;
 	--text-color-pneumatic: #bb86fc;
 	--text-color-tooltip: #121212;
 	--text-color-link: #bb86fc;
 	--tooltip-color: #bb86fc;
 	--icon-color-white: #fff;
 	--icon-color-black: #000;
+	--icon-color-diet: #05c793;
+	--icon-color-exercise: #f37c8c;
+	--icon-color-recovery: #a4a6f4;
+	--icon-color-tools: #cb9f01;
+	--outline-color-intro: rgba(153, 153, 255, .5);
+	--outline-color-diet: rgba(5, 199, 147, .5);
+	--outline-color-exercise: rgba(243, 124, 140, .5);
+	--outline-color-recovery: rgba(164, 166, 244, .5);
+	--outline-color-tools: rgba(203, 159, 1, .5);
 }
 
 html {
@@ -212,6 +226,15 @@ a:link {
 	flex-direction: column;
 }
 
+#introduction_content {
+	padding: 0 25px;
+	border: 3px solid var(--outline-color-intro);
+	border-radius: 25px;
+	/* fallback font-size*/
+	font-size: 3em;
+	font-size: 1vmax;
+}
+
 /* || DIET PAGE STYLING */
 
 #diet {
@@ -228,7 +251,7 @@ a:link {
 
 #diet_content {
 	padding: 0 25px;
-	border: 3px solid rgba(0, 0, 0, .5);
+	border: 3px solid var(--outline-color-diet);
 	border-radius: 25px;
 	/* fallback font-size*/
 	font-size: 3em;
@@ -236,7 +259,7 @@ a:link {
 }
 
 .diet_icon {
-	fill: var(--icon-color-black);
+	fill: var(--icon-color-diet);
 }
 
 /* || EXERCISE PAGE STYLING */
@@ -255,7 +278,7 @@ a:link {
 
 #exercise_content {
 	padding: 0 25px;
-	border: 3px solid rgba(255, 255, 255, .5);
+	border: 3px solid var(--outline-color-exercise);
 	border-radius: 25px;
 	/* fallback font-size*/
 	font-size: 3em;
@@ -263,7 +286,7 @@ a:link {
 }
 
 .exercise_icon {
-	fill: var(--icon-color-white);
+	fill: var(--icon-color-exercise);
 }
 
 /* || RECOVERY PAGE STYLING */
@@ -280,8 +303,17 @@ a:link {
 	color: var(--text-color-black);
 }
 
+#recovery_content {
+	padding: 0 25px;
+	border: 3px solid var(--outline-color-recovery);
+	border-radius: 25px;
+	/* fallback font-size*/
+	font-size: 3em;
+	font-size: 1vmax;
+}
+
 .recovery_icon {
-	fill: var(--icon-color-black);
+	fill: var(--icon-color-recovery);
 }
 
 /* || TOOLS PAGE STYLING */
@@ -298,6 +330,49 @@ a:link {
 	color: var(--text-color-black);
 }
 
+#tools_content {
+	padding: 0 25px;
+	border: 3px solid var(--outline-color-tools);
+	border-radius: 25px;
+	/* fallback font-size*/
+	font-size: 3em;
+	font-size: 1vmax;
+}
+
 .tools_icon {
-	fill: var(--icon-color-black);
+	fill: var(--icon-color-tools);
+}
+
+input[type="radio"] {
+	transform: scale(1.5);
+	cursor: pointer;
+}
+
+input[type="number"], 
+select {
+	width: 100%;
+	padding: 7px;
+	border-radius: 5px;
+	border: 1px solid grey;
+	box-sizing: border-box;
+	margin-bottom: 5px;
+}
+
+input:invalid {
+	border: 1px solid red;
+}
+
+input[type="submit"] {
+	background-color: #0000ff;
+	color: white;
+	border: 2px solid white;
+	outline: 1px solid black;
+	padding: 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	transform: scale(2);
+}
+
+input[type="submit"]:hover {
+	background-color: #4747ff;
 }
