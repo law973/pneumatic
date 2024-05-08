@@ -69,10 +69,6 @@ p {
 	text-align: left;
 }
 
-a:link {
-	color: var(--text-color-link);
-}
-
 /* || LIGHT & DARK THEME SWITCHER */
 
 #theme-switcher {
@@ -235,6 +231,10 @@ a:link {
 	font-size: 1vmax;
 }
 
+#introduction a {
+	color: var(--text-color-link);
+}
+
 /* || DIET PAGE STYLING */
 
 #diet {
@@ -376,3 +376,5 @@ input[type="submit"] {
 input[type="submit"]:hover {
 	background-color: #4747ff;
 }
+
+/* || FOOTER STYLING */
