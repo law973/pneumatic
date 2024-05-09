@@ -17,9 +17,11 @@ function switchTheme() {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     if (!currentTheme || currentTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
         darkTheme();
     } else {
         document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
         lightTheme();
     }
 }
@@ -27,20 +29,31 @@ function switchTheme() {
 // Event Listener
 themeSwitcher.addEventListener('click', switchTheme);
 
+// Check Local Storage For Theme
+// const currentThemeFromLocalStorage = localStorage.getItem('theme');
+// if (currentThemeFromLocalStorage) {
+//     document.documentElement.setAttribute('data-theme', currentThemeFromLocalStorage);
+//     if (currentThemeFromLocalStorage === 'dark') {
+//       darkMode();
+//     } else {
+//       lightMode();
+//     }
+//   }
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // get all necessary inputs by their IDs
+    // Get All Necessary Inputs By Their IDs
     let genderInputs = document.querySelectorAll("input[name='gender']");
     let age = document.getElementById("age");
     let weight = document.getElementById("weight");
     let height = document.getElementById("height");
     let activity = document.getElementById("activity");
 
-    // check if radio buttons are selected
+    // Check If Radio Buttons Are Selected
     let genderSelected = Array.from(genderInputs).some(input => input.checked);
 
-    // check if every field has a value
+    // Check If Every Field Has A Value
     if (
         genderSelected &&
         age.value &&
@@ -48,8 +61,8 @@ form.addEventListener("submit", (e) => {
         height.value &&
         activity.value
     ) {
-        alert("Full calculator functionality coming soon");
+        alert("Full calculator functionality coming soon!");
     } else {
-        alert("Please ensure that you add a value for each input.");
+        alert("Please add a value for each input!");
     }
 });
