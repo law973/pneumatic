@@ -61,6 +61,7 @@
 html {
 	/* box-sizing: border-box; */
 	scroll-behavior: smooth;
+	font-size: 16px;
 }
 
 body {
@@ -76,6 +77,11 @@ body {
 p {
 	max-width: 50ch;
 	text-align: left;
+}
+
+svg {
+	height: 100%;
+	width: auto;
 }
 
 /* || LIGHT & DARK THEME SWITCHER */
@@ -117,46 +123,47 @@ p {
 	}
 
 #greeting_hello {
-	/* fallback font-size*/
-	font-size: 6em;
-	font-size: 4vmax;
+	font-size: clamp(2rem, 4vw, 7rem);
 }
 
 	#greeting_hello span {
+		display: inline-block;
 		opacity: 0;
-		transform: translateY(2em);
-		animation: helloMove 0.5s forwards;
+		transform: translateY(1em);
+		animation: helloMove 0.35s forwards;
 	}
 
-	#greeting_hello span:nth-child(1) {
-		animation-delay: 0.2s;
-	}
+		#greeting_hello span:nth-child(1) {
+			animation-delay: 0.25s;
+		}
   
-	#greeting_hello span:nth-child(2) {
-		animation-delay: 0.4s;
-	}
+		#greeting_hello span:nth-child(2) {
+			animation-delay: 0.4s;
+		}
   
-	#greeting_hello span:nth-child(3) {
-		animation-delay: 0.6s;
-	}
+		#greeting_hello span:nth-child(3) {
+			animation-delay: 0.55s;
+		}
 
-	#greeting_hello span:nth-child(4) {
-		animation-delay: 0.8s;
-	}
+		#greeting_hello span:nth-child(4) {
+			animation-delay: 0.7s;
+		}
   
-	#greeting_hello span:nth-child(5) {
-		animation-delay: 1s;
-	}
+		#greeting_hello span:nth-child(5) {
+			animation-delay: 0.85s;
+		}
   
-	#greeting_hello span:nth-child(6) {
-		animation-delay: 1.2s;
-	}
+		#greeting_hello span:nth-child(6) {
+			animation-delay: 1s;
+		}
 
 #greeting_welcome {
 	/* fallback font-size*/
 	font-size: 3em;
 	font-size: 2vmax;
-
+	opacity: 0;
+	animation: welcomeAppear 1.25s forwards;
+	animation-delay: 1.75s;
 }
 
 #greeting_pneumatic {
@@ -167,7 +174,9 @@ p {
 #greeting_arrow {
 	position: absolute;
 	bottom: 0;
-	animation: downArrowMove 1.25s ease-in-out infinite alternate;
+	opacity: 0;
+	animation: welcomeAppear 1.25s forwards, downArrowMove 1.25s ease-in-out infinite alternate;
+	animation-delay: 2.75s;
 }
 
 #arrow {
@@ -217,9 +226,18 @@ p {
 	}
 
 @keyframes helloMove {
-	to {
+	50%	{
+		transform: translateY(-1.5em);
+	}
+	100% {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+@keyframes welcomeAppear {
+	to {
+		opacity: 1;
 	}
 }
 
