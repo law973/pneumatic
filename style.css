@@ -97,26 +97,6 @@ svg {
 			margin-right: 10px;
 		}
 
-/* || LIGHT & DARK THEME SWITCHER */
-
-#theme-switcher {
-	z-index: 100;
-	position: fixed;
-	bottom: 30px;
-	right: 30px;
-	border-radius: 25%;
-	cursor: pointer;
-}
-
-#sun_icon, #moon_icon {
-	fill: var(--icon-color-white);
-	transition: fill 0.75s ease;
-}
-
-#sun_icon {
-	visibility: hidden;
-}
-
 /* || SCROLLBAR STYLING */
 
 ::-webkit-scrollbar {
@@ -136,6 +116,30 @@ svg {
 	::-webkit-scrollbar-thumb:hover {
 		background: var(--scrollbar-color-thumb-hover);
 	}
+
+/* || NAVIGATION STYLING */
+
+
+
+/* || LIGHT & DARK THEME SWITCHER */
+
+#theme-switcher {
+	z-index: 100;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	border-radius: 25%;
+	cursor: pointer;
+}
+
+#sun_icon, #moon_icon {
+	fill: var(--icon-color-white);
+	transition: fill 0.75s ease;
+}
+
+#sun_icon {
+	visibility: hidden;
+}
 
 /* || GREETING PAGE STYLING */
 
@@ -334,6 +338,7 @@ svg {
 	/* fallback font-size*/
 	font-size: 3em;
 	font-size: 1vmax;
+	transition: border 0.75s ease;
 }
 
 .diet_icon {
@@ -421,6 +426,7 @@ svg {
 
 #tools_content {
 	max-height: 100%;
+	margin: 50px 0;
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-tools);
 	border-radius: 25px;
@@ -429,6 +435,26 @@ svg {
 	font-size: 1vmax;
 	transition: border 0.75s ease;
 }
+
+#form_tdee {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+}
+
+	#form_tdee fieldset {
+		text-align: left;
+		font-weight: bold;
+		width: fit-content;
+		border-radius: 5px;
+		border-color: var(--outline-color-tools);
+		transition: border 0.75s ease;
+	}
+
+	#form_tdee label {
+		text-align: left;
+		font-weight: bold;
+	}
 
 .tools_icon {
 	fill: var(--icon-color-tools);
@@ -450,11 +476,11 @@ select {
 	margin-bottom: 5px;
 }
 
-input:invalid {
-	border: 3px solid var(--form-color-error);
-	outline: 1px solid var(--form-color-border);
-	transition: border 0.75s ease, outline 0.75s ease;
-}
+	input:invalid {
+		border: 3px solid var(--form-color-error);
+		outline: 1px solid var(--form-color-border);
+		transition: border 0.75s ease, outline 0.75s ease;
+	}
 
 input[type="submit"] {
 	background-color: var(--form-color-button);
@@ -464,12 +490,13 @@ input[type="submit"] {
 	padding: 5px 10px;
 	border-radius: 5px;
 	cursor: pointer;
-	transform: scale(2);
+	font-family: inherit;
+	font-size: 1rem;
 }
 
 	input[type="submit"]:hover {
 		background-color: #1f1fff;
-		transform: scale(1.9);
+		transform: scale(0.9);
 	}
 
 	input[type="submit"]:active {
@@ -477,7 +504,7 @@ input[type="submit"] {
 		color: black;
 		border: 2px solid black;
 		outline: 1px solid black;
-		transform: scale(1.8);
+		transform: scale(0.8);
 	}
 
 	input[type="submit"]:not(:hover), input[type="submit"]:not(:active) {

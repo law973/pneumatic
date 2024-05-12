@@ -3,17 +3,17 @@ const sunIcon = document.getElementById('sun_icon');
 const moonIcon = document.getElementById('moon_icon');
 let form = document.getElementById("form_tdee");
 
-function lightTheme() {
+const lightTheme = () => {
     sunIcon.style.visibility = "hidden";
     moonIcon.style.visibility = "visible";
 }
 
-function darkTheme() {
+const darkTheme = () => {
     moonIcon.style.visibility = "hidden";
     sunIcon.style.visibility = "visible";
 }
 
-function switchTheme() {
+const switchTheme = () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
     if (!currentTheme || currentTheme === 'light') {
         document.documentElement.setAttribute('data-theme', 'dark');
