@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 :root {
+	--scrollbar-color-thumb: #fff;
+	--scrollbar-color-thumb-hover: #ebebeb;
 	--bg-color-main: #0000ff;
 	--bg-color-diet: #06d6a0;
 	--bg-color-exercise: #880d1e;
@@ -29,6 +31,8 @@
 }
 
 [data-theme="dark"] {
+	--scrollbar-color-thumb: #d7dadc;
+	--scrollbar-color-thumb-hover: #bb86fc;
 	--bg-color-main: #121212;
 	--bg-color-diet: #121212;
 	--bg-color-exercise: #121212;
@@ -80,9 +84,18 @@ p {
 }
 
 svg {
-	height: 100%;
-	width: auto;
+	height: 36px;
+	width: 36px;
 }
+
+	.svg-container {
+		display: flex;
+		align-items: center;
+	}
+
+		.svg-container svg {
+			margin-right: 10px;
+		}
 
 /* || LIGHT & DARK THEME SWITCHER */
 
@@ -103,6 +116,26 @@ svg {
 #sun_icon {
 	visibility: hidden;
 }
+
+/* || SCROLLBAR STYLING */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+	background: none;
+}
+  
+::-webkit-scrollbar-thumb {
+	background: var(--scrollbar-color-thumb);
+	border-radius: 5px;
+	min-height: 40px;
+}
+  
+	::-webkit-scrollbar-thumb:hover {
+		background: var(--scrollbar-color-thumb-hover);
+	}
 
 /* || GREETING PAGE STYLING */
 
