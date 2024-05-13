@@ -15,6 +15,24 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+	<!-- Navigation -->
+	<div class="nav-wrapper">
+		<div class="menu-icon" onclick="toggleMenu()">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		<nav id="nav">
+			<ul>
+				<li><a href="#greeting" onclick="hideMenu()">Home</a></li>
+				<li><a href="#introduction" onclick="hideMenu()">Intro</a></li>
+				<li><a href="#diet" onclick="hideMenu()">Diet</a></li>
+				<li><a href="#exercise" onclick="hideMenu()">Exercise</a></li>
+				<li><a href="#recovery" onclick="hideMenu()">Recovery</a></li>
+				<li><a href="#tools" onclick="hideMenu()">Tools</a></li>
+			</ul>
+		</nav>
+	</div>
 	<main>
 		<!-- Dark Mode Switch -->
 		<div id="theme-switcher" class="theme-switcher">

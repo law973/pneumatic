@@ -1,7 +1,8 @@
+// Light & Dark Themes
+
 const themeSwitcher = document.getElementById('theme-switcher');
 const sunIcon = document.getElementById('sun_icon');
 const moonIcon = document.getElementById('moon_icon');
-let form = document.getElementById("form_tdee");
 
 const lightTheme = () => {
     sunIcon.style.visibility = "hidden";
@@ -26,10 +27,10 @@ const switchTheme = () => {
     }
 }
 
-// Event Listener
 themeSwitcher.addEventListener('click', switchTheme);
 
 // Check Local Storage For Theme
+
 // const currentThemeFromLocalStorage = localStorage.getItem('theme');
 // if (currentThemeFromLocalStorage) {
 //     document.documentElement.setAttribute('data-theme', currentThemeFromLocalStorage);
@@ -39,6 +40,10 @@ themeSwitcher.addEventListener('click', switchTheme);
 //       lightMode();
 //     }
 //   }
+
+// TDEE Calculator Form Functionality
+
+let form = document.getElementById("form_tdee");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -66,3 +71,18 @@ form.addEventListener("submit", (e) => {
         alert("Please add a value for each input!");
     }
 });
+
+// Navigation
+
+const nav = document.getElementById('nav');
+const menuIcon = document.querySelector('.menu-icon');
+
+const toggleMenu = () => {
+  nav.classList.toggle('active');
+  menuIcon.classList.toggle('active');
+}
+
+const hideMenu = () => {
+  nav.classList.remove('active');
+  menuIcon.classList.remove('active');
+}
