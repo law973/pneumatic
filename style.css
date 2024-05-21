@@ -34,6 +34,12 @@
 	--form-color-radio-accent: #0000ff;
 	--form-color-error: #b00020;
 	--form-color-button: #0000ff;
+	--footer-color-border: #0000ff;
+	--overlay-color-intro: #0000ff;
+	--overlay-color-diet: #06d6a0;
+	--overlay-color-exercise: #880d1e;
+	--overlay-color-recovery: #bbbdf6;
+	--overlay-color-tools: #fec601;
 }
 
 [data-theme="dark"] {
@@ -70,6 +76,12 @@
 	--form-color-radio-accent: #bb86fc;
 	--form-color-error: #CF6679;
 	--form-color-button: #3700b3;
+	--footer-color-border: #d7dadc;
+	--overlay-color-intro: rgba(255, 255, 255, 0.05);
+	--overlay-color-diet: rgba(255, 255, 255, 0.05);
+	--overlay-color-exercise: rgba(255, 255, 255, 0.05);
+	--overlay-color-recovery: rgba(255, 255, 255, 0.05);
+	--overlay-color-tools: rgba(255, 255, 255, 0.05);
 }
 
 /* || GENERAL STYLING */
@@ -405,13 +417,23 @@ nav {
 	}
 
 #introduction_content {
+	background-color: var(--overlay-color-intro);
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-intro);
 	border-radius: 25px;
 	/* fallback font-size*/
 	font-size: 3em;
 	font-size: 1vmax;
-	transition: border 0.75s ease;
+	transition: background-color 0.75s ease, border 0.75s ease;
+	box-shadow:
+  		1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
+		3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
+		6.8px 6.8px 7.7px rgba(0, 0, 0, 0.032),
+		11.2px 11.2px 12.8px rgba(0, 0, 0, 0.038),
+		18.5px 18.5px 21.2px rgba(0, 0, 0, 0.044),
+		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
+		70px 70px 80px rgba(0, 0, 0, 0.07)
+	;
 }
 
 /* || DIET PAGE STYLING */
@@ -431,13 +453,23 @@ nav {
 }
 
 #diet_content {
+	background-color: var(--overlay-color-diet);
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-diet);
 	border-radius: 25px;
 	/* fallback font-size*/
 	font-size: 3em;
 	font-size: 1vmax;
-	transition: border 0.75s ease;
+	transition: background-color 0.75s ease, border 0.75s ease;
+	box-shadow:
+  		1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
+		3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
+		6.8px 6.8px 7.7px rgba(0, 0, 0, 0.032),
+		11.2px 11.2px 12.8px rgba(0, 0, 0, 0.038),
+		18.5px 18.5px 21.2px rgba(0, 0, 0, 0.044),
+		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
+		70px 70px 80px rgba(0, 0, 0, 0.07)
+	;
 }
 
 .diet_icon {
@@ -462,13 +494,23 @@ nav {
 }
 
 #exercise_content {
+	background-color: var(--overlay-color-exercise);
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-exercise);
 	border-radius: 25px;
 	/* fallback font-size*/
 	font-size: 3em;
 	font-size: 1vmax;
-	transition: border 0.75s ease;
+	transition: background-color 0.75s ease, border 0.75s ease;
+	box-shadow:
+  		1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
+		3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
+		6.8px 6.8px 7.7px rgba(0, 0, 0, 0.032),
+		11.2px 11.2px 12.8px rgba(0, 0, 0, 0.038),
+		18.5px 18.5px 21.2px rgba(0, 0, 0, 0.044),
+		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
+		70px 70px 80px rgba(0, 0, 0, 0.07)
+	;
 }
 
 .exercise_icon {
@@ -493,13 +535,23 @@ nav {
 }
 
 #recovery_content {
+	background-color: var(--overlay-color-recovery);
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-recovery);
 	border-radius: 25px;
 	/* fallback font-size*/
 	font-size: 3em;
 	font-size: 1vmax;
-	transition: border 0.75s ease;
+	transition: background-color 0.75s ease, border 0.75s ease;
+	box-shadow:
+  		1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
+		3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
+		6.8px 6.8px 7.7px rgba(0, 0, 0, 0.032),
+		11.2px 11.2px 12.8px rgba(0, 0, 0, 0.038),
+		18.5px 18.5px 21.2px rgba(0, 0, 0, 0.044),
+		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
+		70px 70px 80px rgba(0, 0, 0, 0.07)
+	;
 }
 
 .recovery_icon {
@@ -524,6 +576,7 @@ nav {
 }
 
 #tools_content {
+	background-color: var(--overlay-color-tools);
 	max-height: 100%;
 	margin: 50px 0;
 	padding: 0 25px;
@@ -532,7 +585,16 @@ nav {
 	/* fallback font-size*/
 	font-size: 3em;
 	font-size: 1vmax;
-	transition: border 0.75s ease;
+	transition: background-color 0.75s ease, border 0.75s ease;
+	box-shadow:
+  		1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
+		3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
+		6.8px 6.8px 7.7px rgba(0, 0, 0, 0.032),
+		11.2px 11.2px 12.8px rgba(0, 0, 0, 0.038),
+		18.5px 18.5px 21.2px rgba(0, 0, 0, 0.044),
+		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
+		70px 70px 80px rgba(0, 0, 0, 0.07)
+	;
 }
 
 #form_tdee {
@@ -588,20 +650,23 @@ select {
 }
 
 input[type="submit"] {
+	width: min-content;
 	background-color: var(--form-color-button);
 	color: white;
 	border: 2px solid white;
 	outline: 1px solid black;
-	padding: 5px 10px;
+	margin-top: -30px;
+	padding: 5px 152px 5px 10px;
 	border-radius: 5px;
 	cursor: pointer;
 	font-family: inherit;
-	font-size: 1rem;
+	font-size: 1.5rem;
+	text-align: left;
 }
 
 	input[type="submit"]:hover {
 		background-color: #1f1fff;
-		transform: scale(0.9);
+		transform: scale(0.975);
 	}
 
 	input[type="submit"]:active {
@@ -609,7 +674,7 @@ input[type="submit"] {
 		color: black;
 		border: 2px solid black;
 		outline: 1px solid black;
-		transform: scale(0.8);
+		transform: scale(0.95);
 	}
 
 	input[type="submit"]:not(:hover), input[type="submit"]:not(:active) {
@@ -619,7 +684,9 @@ input[type="submit"] {
 /* || FOOTER STYLING */
 
 footer {
+	box-sizing: border-box;
 	padding: 20px;
+	border-top: 1px solid var(--footer-color-border);
 }
 
 	footer a {
