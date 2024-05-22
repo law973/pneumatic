@@ -238,76 +238,84 @@
 					</p>
 				</h2>
 
-					<form id="form_tdee">
-						<fieldset>
-							<legend>Gender</legend>
-							<input type="radio" id="gender_m" name="gender" value="male" checked="checked">
-							<label for="gender_m">Male</label>
-							&nbsp;
-							<input type="radio" id="gender_f" name="gender" value="female">
-							<label for="gender_f">Female</label>
-						</fieldset><br>
+				<form id="form_tdee">
+					<fieldset>
+						<legend>Gender</legend>
+						<input type="radio" id="gender_m" name="gender" value="male" checked="checked">
+						<label for="gender_m">Male</label>
+						&nbsp;
+						<input type="radio" id="gender_f" name="gender" value="female">
+						<label for="gender_f">Female</label>
+					</fieldset><br>
 
-						<label for="age">Age</label>
-						<input type="number" id="age" name="age" min="0" max="122" required><br>
+					<label for="age">Age</label>
+					<input type="number" id="age" name="age" min="0" max="122" required><br>
 
-						<label for="weight">Weight</label>
-						<input type="number" id="weight" min="0" max="1400" placeholder="lbs" required><br>
+					<label for="weight">Weight</label>
+					<input type="number" id="weight" min="0" max="1400" placeholder="lbs" required><br>
 
-						<label for="height">Height</label>
-						<select name="height" id="height">
-							<option value="height_4_7">4ft 7in</option>
-							<option value="height_4_8">4ft 8in</option>
-							<option value="height_4_9">4ft 9in</option>
-							<option value="height_4_10">4ft 10in</option>
-							<option value="height_4_11">4ft 11in</option>
-							<option value="height_5_0">5ft 0in</option>
-							<option value="height_5_1">5ft 1in</option>
-							<option value="height_5_2">5ft 2in</option>
-							<option value="height_5_3">5ft 3in</option>
-							<option value="height_5_4">5ft 4in</option>
-							<option value="height_5_5">5ft 5in</option>
-							<option value="height_5_6">5ft 6in</option>
-							<option value="height_5_7">5ft 7in</option>
-							<option value="height_5_8">5ft 8in</option>
-							<option value="height_5_9">5ft 9in</option>
-							<option value="height_5_10" selected>5ft 10in</option>
-							<option value="height_5_11">5ft 11in</option>
-							<option value="height_6_0">6ft 0in</option>
-							<option value="height_6_1">6ft 1in</option>
-							<option value="height_6_2">6ft 2in</option>
-							<option value="height_6_3">6ft 3in</option>
-							<option value="height_6_4">6ft 4in</option>
-							<option value="height_6_5">6ft 5in</option>
-							<option value="height_6_6">6ft 6in</option>
-							<option value="height_6_7">6ft 7in</option>
-							<option value="height_6_8">6ft 8in</option>
-							<option value="height_6_9">6ft 9in</option>
-							<option value="height_6_10">6ft 10in</option>
-							<option value="height_6_11">6ft 11in</option>
-							<option value="height_7_0">7ft 0in</option>
-						</select><br>
+					<label for="height">Height</label>
+					<select name="height" id="height">
+						<option value="height_4_7">4ft 7in</option>
+						<option value="height_4_8">4ft 8in</option>
+						<option value="height_4_9">4ft 9in</option>
+						<option value="height_4_10">4ft 10in</option>
+						<option value="height_4_11">4ft 11in</option>
+						<option value="height_5_0">5ft 0in</option>
+						<option value="height_5_1">5ft 1in</option>
+						<option value="height_5_2">5ft 2in</option>
+						<option value="height_5_3">5ft 3in</option>
+						<option value="height_5_4">5ft 4in</option>
+						<option value="height_5_5">5ft 5in</option>
+						<option value="height_5_6">5ft 6in</option>
+						<option value="height_5_7">5ft 7in</option>
+						<option value="height_5_8">5ft 8in</option>
+						<option value="height_5_9">5ft 9in</option>
+						<option value="height_5_10" selected>5ft 10in</option>
+						<option value="height_5_11">5ft 11in</option>
+						<option value="height_6_0">6ft 0in</option>
+						<option value="height_6_1">6ft 1in</option>
+						<option value="height_6_2">6ft 2in</option>
+						<option value="height_6_3">6ft 3in</option>
+						<option value="height_6_4">6ft 4in</option>
+						<option value="height_6_5">6ft 5in</option>
+						<option value="height_6_6">6ft 6in</option>
+						<option value="height_6_7">6ft 7in</option>
+						<option value="height_6_8">6ft 8in</option>
+						<option value="height_6_9">6ft 9in</option>
+						<option value="height_6_10">6ft 10in</option>
+						<option value="height_6_11">6ft 11in</option>
+						<option value="height_7_0">7ft 0in</option>
+					</select><br>
 
-						<label for="activity">Activity</label>
-						<select name="activity" id="activity">
-							<option value="activity_sedentary">Sedentary (office job)</option>
-							<option value="activity_light">Light Exercise (1-2 days/week)</option>
-							<option value="activity_moderate">Moderate Exercise (3-5 days/week)</option>
-							<option value="activity_heavy">Heavy Exercise (6-7 days/week)</option>
-							<option value="activity_athlete">Athlete (2x per day)</option>
-						</select><br><br>
+					<label for="activity">Activity</label>
+					<select name="activity" id="activity">
+						<option value="activity_sedentary">Sedentary (office job)</option>
+						<option value="activity_light">Light Exercise (1-2 days/week)</option>
+						<option value="activity_moderate">Moderate Exercise (3-5 days/week)</option>
+						<option value="activity_heavy">Heavy Exercise (6-7 days/week)</option>
+						<option value="activity_athlete">Athlete (2x per day)</option>
+					</select><br><br>
 
-						<input type="submit" value="Calculate">
-						
-					</form>
-				<h2>
+					<input type="submit" value="Calculate">
+					
+				</form>
+
+				<p>The estimate for your maintenance calories is:</p>
+
+				<h2 class="svg-container">
 					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="tools_icon">
 						<path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-80q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-80q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Z"/>
 					</svg>
 					Calorie Goal
 				</h2>
-				<h2>Plate Combination Creator</h2>
-				<h2>
+
+				<div class="slide-container">
+					<input type="range" min="1" max="17" value="9" class="slider" id="myRange">
+				</div>
+
+				<h2 class="svg-container">Plate Combination Creator</h2>
+				<h2 class="svg-container">
 					<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="tools_icon">
 						<path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q133 0 226.5-93.5T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160Z"/>
 					</svg>
