@@ -4,6 +4,7 @@
 	--navigation-color-icon: #fff;
 	--scrollbar-color-thumb: #fff;
 	--scrollbar-color-thumb-hover: #ebebeb;
+	--scrollbar-color-track: #0000ff;
 	--bg-color-main: #0000ff;
 	--bg-color-diet: #06d6a0;
 	--bg-color-exercise: #880d1e;
@@ -46,6 +47,7 @@
 	--navigation-color-icon: #d7dadc;
 	--scrollbar-color-thumb: #d7dadc;
 	--scrollbar-color-thumb-hover: #bb86fc;
+	--scrollbar-color-track: #1e1e1e;
 	--bg-color-main: #121212;
 	--bg-color-diet: #121212;
 	--bg-color-exercise: #121212;
@@ -87,8 +89,8 @@
 /* || GENERAL STYLING */
 
 html {
-	scroll-behavior: smooth;
 	font-size: 16px;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -102,13 +104,13 @@ body {
 }
 
 p {
-	max-width: 50ch;
 	text-align: left;
+	max-width: 50ch;
 }
 
 svg {
-	height: 36px;
 	width: 36px;
+	height: 36px;
 }
 
 	.svg-container {
@@ -127,13 +129,13 @@ svg {
 }
   
 ::-webkit-scrollbar-track {
-	background: none;
+	background: var(--scrollbar-color-track);
 }
   
 ::-webkit-scrollbar-thumb {
+	min-height: 40px;
 	background: var(--scrollbar-color-thumb);
 	border-radius: 5px;
-	min-height: 40px;
 }
   
 	::-webkit-scrollbar-thumb:hover {
@@ -178,22 +180,22 @@ svg {
 }
 
 .nav-wrapper {
-    height: 60px;
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+	width: 100%;
+	height: 60px;
     z-index: 10;
 }
 
 nav {
-    height: 100%;
-	width: 200px;
-	background: var(--bg-color-nav);
-    color: var(--text-color-white);
-    position: fixed;
+	position: fixed;
     top: 0;
     left: 0;
+	width: 200px;
+    height: 100%;
+	background: var(--bg-color-nav);
+    color: var(--text-color-white);
 	display: flex;
 	justify-content: center;
     transform: translateX(-100%);
@@ -202,14 +204,14 @@ nav {
 }
 
     nav ul {
+		font-size: 2rem;
+		text-align: left;
+		height: 85%;
         list-style: none;
+		padding: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 85%;
-        font-size: 2rem;
-		text-align: left;
-		padding: 0;
     }
 
         nav ul li {
@@ -217,13 +219,13 @@ nav {
         }
 
 	nav a {
-		color: var(--text-color-white);
 		text-decoration: none;
+		color: var(--text-color-white);
 	}
 
 	nav a:hover {
-		color: var(--text-color-pneumatic);
 		text-decoration: underline;
+		color: var(--text-color-pneumatic);
 	}
 
     nav.active {
@@ -233,12 +235,12 @@ nav {
 /* || LIGHT & DARK THEME SWITCHER */
 
 #theme-switcher {
-	z-index: 100;
 	position: fixed;
 	bottom: 30px;
 	right: 30px;
 	border-radius: 25%;
 	cursor: pointer;
+	z-index: 100;
 }
 
 #sun_icon, #moon_icon {
@@ -253,14 +255,14 @@ nav {
 /* || GREETING PAGE STYLING */
 
 #greeting {
-	height: 100vh;
 	width: 100vw;
-	max-height: 100vh;
+	height: 100vh;
 	max-width: 100%;
+	max-height: 100vh;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
 }
 
 	#greeting a {
@@ -339,19 +341,18 @@ nav {
 
 	/* tooltip text */
 	.tooltip .tooltiptext {
-		visibility: hidden;
-		width: 150px;
-		top: 100%;
-		left: 50%;
-		margin-left: -75px;
-		background-color: var(--tooltip-color);
-		color: var(--text-color-tooltip);
 		font-size: x-large;
 		text-align: center;
+		visibility: hidden;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		width: 150px;
+		background-color: var(--tooltip-color);
+		color: var(--text-color-tooltip);
+		margin-left: -75px;
 		padding: 5px 0;
 		border-radius: 6px;
-
-		position: absolute;
 		z-index: 1;
 	}
   
@@ -399,14 +400,14 @@ nav {
 /* || INTRODUCTION PAGE STYLING */
 
 #introduction {
-	height: 100vh;
 	width: 100vw;
-	max-height: 100vh;
+	height: 100vh;
 	max-width: 100%;
+	max-height: 100vh;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
 }
 
 	#introduction a {
@@ -415,14 +416,13 @@ nav {
 	}
 
 #introduction_content {
+	/* fallback font-size*/
+	font-size: 3em;
+	font-size: 1vmax;
 	background-color: var(--overlay-color-intro);
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-intro);
 	border-radius: 25px;
-	/* fallback font-size*/
-	font-size: 3em;
-	font-size: 1vmax;
-	transition: background-color 0.75s ease, border 0.75s ease;
 	box-shadow:
   		1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
 		3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
@@ -432,33 +432,33 @@ nav {
 		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
 		70px 70px 80px rgba(0, 0, 0, 0.07)
 	;
+	transition: background-color 0.75s ease, border 0.75s ease;
 }
 
 /* || DIET PAGE STYLING */
 
 #diet {
-	height: fit-content;
 	width: 100vw;
-	min-height: 100vh;
+	height: fit-content;
 	max-width: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+	min-height: 100vh;
 	background-color: var(--bg-color-diet);
 	color: var(--text-color-black);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	transition: background-color 0.75s ease, color 0.75s ease;
 }
 
 #diet_content {
+	/* fallback font-size*/
+	font-size: 3em;
+	font-size: 1vmax;
 	background-color: var(--overlay-color-diet);
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-diet);
 	border-radius: 25px;
-	/* fallback font-size*/
-	font-size: 3em;
-	font-size: 1vmax;
-	transition: background-color 0.75s ease, border 0.75s ease;
 	box-shadow:
   		1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
 		3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
@@ -468,6 +468,7 @@ nav {
 		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
 		70px 70px 80px rgba(0, 0, 0, 0.07)
 	;
+	transition: background-color 0.75s ease, border 0.75s ease;
 }
 
 .diet_icon {
@@ -478,28 +479,27 @@ nav {
 /* || EXERCISE PAGE STYLING */
 
 #exercise {
-	height: fit-content;
 	width: 100vw;
-	min-height: 100vh;
+	height: fit-content;
 	max-width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	min-height: 100vh;
 	background-color: var(--bg-color-exercise);
 	color: var(--text-color-white);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	transition: background-color 0.75s ease, color 0.75s ease;
 }
 
 #exercise_content {
+	/* fallback font-size*/
+	font-size: 3em;
+	font-size: 1vmax;
 	background-color: var(--overlay-color-exercise);
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-exercise);
 	border-radius: 25px;
-	/* fallback font-size*/
-	font-size: 3em;
-	font-size: 1vmax;
-	transition: background-color 0.75s ease, border 0.75s ease;
 	box-shadow:
   		1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
 		3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
@@ -509,6 +509,7 @@ nav {
 		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
 		70px 70px 80px rgba(0, 0, 0, 0.07)
 	;
+	transition: background-color 0.75s ease, border 0.75s ease;
 }
 
 .exercise_icon {
@@ -519,28 +520,27 @@ nav {
 /* || RECOVERY PAGE STYLING */
 
 #recovery {
-	height: fit-content;
 	width: 100vw;
-	min-height: 100vh;
+	height: fit-content;
 	max-width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	min-height: 100vh;
 	background-color: var(--bg-color-recovery);
 	color: var(--text-color-black);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	transition: background-color 0.75s ease, color 0.75s ease;
 }
 
 #recovery_content {
+	/* fallback font-size*/
+	font-size: 3em;
+	font-size: 1vmax;
 	background-color: var(--overlay-color-recovery);
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-recovery);
 	border-radius: 25px;
-	/* fallback font-size*/
-	font-size: 3em;
-	font-size: 1vmax;
-	transition: background-color 0.75s ease, border 0.75s ease;
 	box-shadow:
   		1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
 		3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
@@ -550,6 +550,7 @@ nav {
 		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
 		70px 70px 80px rgba(0, 0, 0, 0.07)
 	;
+	transition: background-color 0.75s ease, border 0.75s ease;
 }
 
 .recovery_icon {
@@ -560,30 +561,29 @@ nav {
 /* || TOOLS PAGE STYLING */
 
 #tools {
-	height: fit-content;
 	width: 100vw;
-	min-height: 100vh;
+	height: fit-content;
 	max-width: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
+	min-height: 100vh;
 	background-color: var(--bg-color-tools);
 	color: var(--text-color-black);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	transition: background-color 0.75s ease, color 0.75s ease;
 }
 
 #tools_content {
-	background-color: var(--overlay-color-tools);
+	/* fallback font-size*/
+	font-size: 3em;
+	font-size: 1vmax;
 	max-height: 100%;
+	background-color: var(--overlay-color-tools);
 	margin: 50px 0;
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-tools);
 	border-radius: 25px;
-	/* fallback font-size*/
-	font-size: 3em;
-	font-size: 1vmax;
-	transition: background-color 0.75s ease, border 0.75s ease;
 	box-shadow:
   		1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
 		3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
@@ -593,6 +593,7 @@ nav {
 		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
 		70px 70px 80px rgba(0, 0, 0, 0.07)
 	;
+	transition: background-color 0.75s ease, border 0.75s ease;
 }
 
 #form_tdee {
@@ -660,14 +661,14 @@ input[type="radio"] {
 
 input[type="number"], 
 select {
+	font-family: inherit;
+	font-size: 1rem;
 	width: 100%;
+	margin-bottom: 5px;
 	padding: 7px;
 	border-radius: 5px;
 	border: 1px solid var(--form-color-border);
 	box-sizing: border-box;
-	margin-bottom: 5px;
-	font-family: inherit;
-	font-size: 1rem;
 }
 
 	input:invalid {
@@ -681,18 +682,18 @@ select {
 }
 
 input[type="submit"] {
-	width: min-content;
-	background-color: var(--form-color-button);
-	color: white;
-	border: 2px solid white;
-	outline: 1px solid black;
-	margin-top: -30px;
-	padding: 5px 152px 5px 10px;
-	border-radius: 5px;
-	cursor: pointer;
 	font-family: inherit;
 	font-size: 1.5rem;
 	text-align: left;
+	width: min-content;
+	background-color: var(--form-color-button);
+	color: white;
+	margin-top: -30px;
+	padding: 5px 152px 5px 10px;
+	border: 2px solid white;
+	border-radius: 5px;
+	outline: 1px solid black;
+	cursor: pointer;
 }
 
 	input[type="submit"]:hover {
@@ -721,8 +722,8 @@ footer {
 }
 
 	footer a {
-		color: var(--text-color-link);
 		text-decoration: none;
+		color: var(--text-color-link);
 		transition: color 0.75s ease;
 	}
 
