@@ -155,11 +155,11 @@ svg {
     justify-content: space-around;
     cursor: pointer;
     z-index: 10;
-}
 
-	.menu-icon:hover {
+	&:hover {
 		transform: scale(1.1);
 	}
+}
 
     .menu-icon div {
         height: 0.25rem;
@@ -221,11 +221,11 @@ nav {
 	nav a {
 		text-decoration: none;
 		color: var(--text-color-white);
-	}
 
-	nav a:hover {
-		text-decoration: underline;
-		color: var(--text-color-pneumatic);
+		&:hover {
+			text-decoration: underline;
+			color: var(--text-color-pneumatic);
+		}
 	}
 
     nav.active {
@@ -411,8 +411,14 @@ nav {
 }
 
 	#introduction a {
-		color: var(--text-color-link);
+		text-decoration: none;
+		color: var(--text-color-white);
 		transition: color 0.75s ease;
+
+		&:hover {
+			text-decoration: underline;
+			color: var(--text-color-link);
+		}
 	}
 
 #introduction_content {
@@ -632,11 +638,11 @@ nav {
 	outline: none;
 	opacity: 0.7;
 	transition: opacity .2s;
-}
 
-	.slider:hover {
+	&:hover {
 		opacity: 1;
 	}
+}
 
 	.slider::-webkit-slider-thumb {
 		appearance: none;
@@ -694,14 +700,13 @@ input[type="submit"] {
 	border-radius: 5px;
 	outline: 1px solid black;
 	cursor: pointer;
-}
 
-	input[type="submit"]:hover {
+	&:hover {
 		background-color: #1f1fff;
 		transform: scale(0.975);
 	}
 
-	input[type="submit"]:active {
+	&:active {
 		background-color: #9999ff;
 		color: black;
 		border: 2px solid black;
@@ -709,9 +714,10 @@ input[type="submit"] {
 		transform: scale(0.95);
 	}
 
-	input[type="submit"]:not(:hover), input[type="submit"]:not(:active) {
+	&:not(:hover), &:not(:active) {
 		transition: background-color 0.75s ease, color 0.75s ease, border 0.75s ease, outline 0.75s ease;
 	}
+}
 
 /* || FOOTER STYLING */
 
@@ -736,8 +742,8 @@ footer {
 	font-size: 50px;
 	margin: 30px;
 	transition: transform 0.25s ease;
-}
 
-	.social_links i:hover {
+	&:hover {
 		transform: scale(1.1);
 	}
+}
