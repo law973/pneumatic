@@ -100,7 +100,9 @@ body {
 	background-color: var(--bg-color-main);
 	color: var(--text-color-white);
 	margin: 0;
-	transition: background-color 0.75s ease, color 0.75s ease;
+	transition: 
+		background-color 0.75s ease, 
+		color 0.75s ease;
 }
 
 p {
@@ -199,7 +201,10 @@ nav {
 	display: flex;
 	justify-content: center;
     transform: translateX(-100%);
-    transition: background 0.75s ease, color 0.75s ease, transform 0.3s ease-in-out;
+    transition: 
+		background 0.75s ease, 
+		color 0.75s ease, 
+		transform 0.3s ease-in-out;
     z-index: 2;
 }
 
@@ -438,7 +443,9 @@ nav {
 		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
 		70px 70px 80px rgba(0, 0, 0, 0.07)
 	;
-	transition: background-color 0.75s ease, border 0.75s ease;
+	transition: 
+		background-color 0.75s ease, 
+		border 0.75s ease;
 }
 
 /* || DIET PAGE STYLING */
@@ -454,7 +461,9 @@ nav {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	transition: background-color 0.75s ease, color 0.75s ease;
+	transition: 
+		background-color 0.75s ease, 
+		color 0.75s ease;
 }
 
 #diet_content {
@@ -474,7 +483,9 @@ nav {
 		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
 		70px 70px 80px rgba(0, 0, 0, 0.07)
 	;
-	transition: background-color 0.75s ease, border 0.75s ease;
+	transition: 
+		background-color 0.75s ease, 
+		border 0.75s ease;
 }
 
 .diet_icon {
@@ -495,7 +506,9 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	transition: background-color 0.75s ease, color 0.75s ease;
+	transition: 
+		background-color 0.75s ease, 
+		color 0.75s ease;
 }
 
 #exercise_content {
@@ -515,7 +528,9 @@ nav {
 		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
 		70px 70px 80px rgba(0, 0, 0, 0.07)
 	;
-	transition: background-color 0.75s ease, border 0.75s ease;
+	transition: 
+		background-color 0.75s ease, 
+		border 0.75s ease;
 }
 
 .exercise_icon {
@@ -536,7 +551,9 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	transition: background-color 0.75s ease, color 0.75s ease;
+	transition: 
+		background-color 0.75s ease, 
+		color 0.75s ease;
 }
 
 #recovery_content {
@@ -556,7 +573,9 @@ nav {
 		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
 		70px 70px 80px rgba(0, 0, 0, 0.07)
 	;
-	transition: background-color 0.75s ease, border 0.75s ease;
+	transition: 
+		background-color 0.75s ease, 
+		border 0.75s ease;
 }
 
 .recovery_icon {
@@ -577,7 +596,9 @@ nav {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	transition: background-color 0.75s ease, color 0.75s ease;
+	transition: 
+		background-color 0.75s ease, 
+		color 0.75s ease;
 }
 
 #tools_content {
@@ -599,7 +620,9 @@ nav {
 		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
 		70px 70px 80px rgba(0, 0, 0, 0.07)
 	;
-	transition: background-color 0.75s ease, border 0.75s ease;
+	transition: 
+		background-color 0.75s ease, 
+		border 0.75s ease;
 }
 
 #form_tdee {
@@ -680,7 +703,9 @@ select {
 	input:invalid {
 		border: 3px solid var(--form-color-error);
 		outline: 1px solid var(--form-color-border);
-		transition: border 0.75s ease, outline 0.75s ease;
+		transition: 
+			border 0.75s ease, 
+			outline 0.75s ease;
 	}
 
 select {
@@ -715,7 +740,11 @@ input[type="submit"] {
 	}
 
 	&:not(:hover), &:not(:active) {
-		transition: background-color 0.75s ease, color 0.75s ease, border 0.75s ease, outline 0.75s ease;
+		transition: 
+			background-color 0.75s ease, 
+			color 0.75s ease, 
+			border 0.75s ease, 
+			outline 0.75s ease;
 	}
 }
 
