@@ -7,11 +7,13 @@ const moonIcon = document.getElementById('moon_icon');
 const lightTheme = () => {
     sunIcon.style.visibility = "hidden";
     moonIcon.style.visibility = "visible";
+    themeSwitcher.title = "Dark Theme";
 }
 
 const darkTheme = () => {
     moonIcon.style.visibility = "hidden";
     sunIcon.style.visibility = "visible";
+    themeSwitcher.title = "Light Theme";
 }
 
 const switchTheme = () => {
