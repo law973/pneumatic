@@ -39,11 +39,11 @@
 	--slider-color-background: #fff;
 	--slider-color-thumb: #0000ff;
 	--footer-color-border: #0000ff;
-	--overlay-color-intro: #0000ff;
-	--overlay-color-diet: #06d6a0;
-	--overlay-color-exercise: #880d1e;
-	--overlay-color-recovery: #bbbdf6;
-	--overlay-color-tools: #fec601;
+	--content-color-intro: #00008f;
+	--content-color-diet: #9cfce3;
+	--content-color-exercise: #5d0914;
+	--content-color-recovery: #ededfd;
+	--content-color-tools: #fee485;
 }
 
 [data-theme="dark"] {
@@ -85,11 +85,11 @@
 	--slider-color-background: #d7dadc;
 	--slider-color-thumb: #3700b3;
 	--footer-color-border: #d7dadc;
-	--overlay-color-intro: rgba(255, 255, 255, 0.05);
-	--overlay-color-diet: rgba(255, 255, 255, 0.05);
-	--overlay-color-exercise: rgba(255, 255, 255, 0.05);
-	--overlay-color-recovery: rgba(255, 255, 255, 0.05);
-	--overlay-color-tools: rgba(255, 255, 255, 0.05);
+	--content-color-intro: rgba(255, 255, 255, 0.05);
+	--content-color-diet: rgba(255, 255, 255, 0.05);
+	--content-color-exercise: rgba(255, 255, 255, 0.05);
+	--content-color-recovery: rgba(255, 255, 255, 0.05);
+	--content-color-tools: rgba(255, 255, 255, 0.05);
 }
 
 /* || GENERAL STYLING */
@@ -113,7 +113,7 @@ body {
 
 p {
 	text-align: left;
-	max-width: 50ch;
+	max-width: 75ch;
 }
 
 svg {
@@ -430,8 +430,8 @@ nav {
 #introduction_content {
 	/* fallback font-size*/
 	font-size: 3em;
-	font-size: 1vmax;
-	background-color: var(--overlay-color-intro);
+	font-size: 1.25vmax;
+	background-color: var(--content-color-intro);
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-intro);
 	border-radius: 25px;
@@ -470,8 +470,8 @@ nav {
 #diet_content {
 	/* fallback font-size*/
 	font-size: 3em;
-	font-size: 1vmax;
-	background-color: var(--overlay-color-diet);
+	font-size: 1.25vmax;
+	background-color: var(--content-color-diet);
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-diet);
 	border-radius: 25px;
@@ -515,8 +515,8 @@ nav {
 #exercise_content {
 	/* fallback font-size*/
 	font-size: 3em;
-	font-size: 1vmax;
-	background-color: var(--overlay-color-exercise);
+	font-size: 1.25vmax;
+	background-color: var(--content-color-exercise);
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-exercise);
 	border-radius: 25px;
@@ -560,8 +560,8 @@ nav {
 #recovery_content {
 	/* fallback font-size*/
 	font-size: 3em;
-	font-size: 1vmax;
-	background-color: var(--overlay-color-recovery);
+	font-size: 1.25vmax;
+	background-color: var(--content-color-recovery);
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-recovery);
 	border-radius: 25px;
@@ -605,9 +605,9 @@ nav {
 #tools_content {
 	/* fallback font-size*/
 	font-size: 3em;
-	font-size: 1vmax;
+	font-size: 1.25vmax;
 	max-height: 100%;
-	background-color: var(--overlay-color-tools);
+	background-color: var(--content-color-tools);
 	margin: 50px 0;
 	padding: 0 25px;
 	border: 3px solid var(--outline-color-tools);
