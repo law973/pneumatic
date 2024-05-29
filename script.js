@@ -1,4 +1,4 @@
-// Light & Dark Themes
+// Light & Dark Themes ----------
 
 const themeSwitcher = document.getElementById('theme-switcher');
 const sunIcon = document.getElementById('sun_icon');
@@ -31,7 +31,7 @@ const switchTheme = () => {
 
 themeSwitcher.addEventListener('click', switchTheme);
 
-// Check Local Storage For Theme
+// Check Local Storage For Theme ----------
 
 // const currentThemeFromLocalStorage = localStorage.getItem('theme');
 // if (currentThemeFromLocalStorage) {
@@ -43,7 +43,7 @@ themeSwitcher.addEventListener('click', switchTheme);
 //     }
 //   }
 
-// TDEE Calculator Form Functionality
+// TDEE Calculator Form Functionality ----------
 
 let form = document.getElementById("form_tdee");
 
@@ -74,7 +74,7 @@ form.addEventListener("submit", (e) => {
     }
 });
 
-// Navigation
+// Navigation ----------
 
 const nav = document.getElementById('nav');
 const menuIcon = document.querySelector('.menu-icon');
@@ -88,3 +88,73 @@ const hideMenu = () => {
   nav.classList.remove('active');
   menuIcon.classList.remove('active');
 }
+
+// Calorie Goal Slider ----------
+
+const slider = document.getElementById("calorie_goal_slider");
+const sliderOutput = document.getElementById("calorie_goal_output");
+
+const updateSlider = () => {
+    let value = slider.value;
+    value = parseInt(value);
+
+    switch(value) {
+        case 1:
+            sliderOutput.innerHTML = "Lose Weight: (2.00 lb / week)";
+            break;
+        case 2:
+            sliderOutput.innerHTML = "Lose Weight: (1.75 lb / week)";
+            break;
+        case 3:
+            sliderOutput.innerHTML = "Lose Weight: (1.50 lb / week)";
+            break;
+        case 4:
+            sliderOutput.innerHTML = "Lose Weight: (1.25 lb / week)";
+            break;
+        case 5:
+            sliderOutput.innerHTML = "Lose Weight: (1.00 lb / week)";
+            break;
+        case 6:
+            sliderOutput.innerHTML = "Lose Weight: (0.75 lb / week)";
+            break;
+        case 7:
+            sliderOutput.innerHTML = "Lose Weight: (0.50 lb / week)";
+            break;
+        case 8:
+            sliderOutput.innerHTML = "Lose Weight: (0.25 lb / week)";
+            break;
+        case 9:
+            sliderOutput.innerHTML = "Maintain Weight";
+            break;
+        case 10:
+            sliderOutput.innerHTML = "Gain Weight: (0.25 lb / week)";
+            break;
+        case 11:
+            sliderOutput.innerHTML = "Gain Weight: (0.50 lb / week)";
+            break;
+        case 12:
+            sliderOutput.innerHTML = "Gain Weight: (0.75 lb / week)";
+            break;
+        case 13:
+            sliderOutput.innerHTML = "Gain Weight: (1.00 lb / week)";
+            break;
+        case 14:
+            sliderOutput.innerHTML = "Gain Weight: (1.25 lb / week)";
+            break;
+        case 15:
+            sliderOutput.innerHTML = "Gain Weight: (1.50 lb / week)";
+            break;
+        case 16:
+            sliderOutput.innerHTML = "Gain Weight: (1.75 lb / week)";
+            break;
+        case 17:
+            sliderOutput.innerHTML = "Gain Weight: (2.00 lb / week)";
+            break;
+        default:
+            sliderOutput.innerHTML = "Gain Weight: (0.25 lb / week)";
+    }
+}
+
+slider.addEventListener('input', updateSlider);
+
+window.onload = updateSlider;

@@ -672,6 +672,7 @@ nav {
 	background: var(--slider-color-background);
 	border-radius: 12px;
 	cursor: pointer;
+	transition: background 0.75s ease;
 }
 
 	.slider::-webkit-slider-thumb {
@@ -683,7 +684,7 @@ nav {
 		border: 2px solid white;
 		outline: 1px solid black;
 		cursor: pointer;
-		z-index: 10;
+		transition: background 0.75s ease;
 	}
 
 	.slider::-moz-range-thumb {
@@ -694,6 +695,7 @@ nav {
 		border: 2px solid white;
 		outline: 1px solid black;
 		cursor: pointer;
+		transition: background 0.75s ease;
 	  }
 
 input[type="radio"] {
