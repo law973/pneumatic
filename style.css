@@ -447,6 +447,11 @@ nav {
 	transition: 
 		background-color 0.75s ease, 
 		border 0.75s ease;
+
+	& ::selection {
+		color: black;
+		background: lightblue;
+	}
 }
 
 /* || DIET PAGE STYLING */
