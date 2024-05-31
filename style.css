@@ -492,6 +492,11 @@ nav {
 	transition: 
 		background-color 0.75s ease, 
 		border 0.75s ease;
+
+	& ::selection {
+		color: white;
+		background: darkgreen;
+	}
 }
 
 .diet_icon {
@@ -537,6 +542,11 @@ nav {
 	transition: 
 		background-color 0.75s ease, 
 		border 0.75s ease;
+
+	& ::selection {
+		color: black;
+		background: lightcoral;
+	}
 }
 
 .exercise_icon {
@@ -582,6 +592,11 @@ nav {
 	transition: 
 		background-color 0.75s ease, 
 		border 0.75s ease;
+
+	& ::selection {
+		color: white;
+		background: purple;
+	}
 }
 
 .recovery_icon {
@@ -629,6 +644,11 @@ nav {
 	transition: 
 		background-color 0.75s ease, 
 		border 0.75s ease;
+
+	& ::selection {
+		color: white;
+		background: darkgoldenrod;
+	}
 }
 
 #form_tdee {
