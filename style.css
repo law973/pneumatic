@@ -44,6 +44,13 @@
 	--content-color-exercise: #5d0914;
 	--content-color-recovery: #ededfd;
 	--content-color-tools: #fee485;
+	--selection-color-intro: #add8e6;
+	--selection-color-diet: #006400;
+	--selection-color-exercise: #f08080;
+	--selection-color-recovery: #800080;
+	--selection-color-tools: #b8860b;
+	--selection-color-text-white: #fff;
+	--selection-color-text-black: #000;
 }
 
 [data-theme="dark"] {
@@ -90,6 +97,13 @@
 	--content-color-exercise: rgba(255, 255, 255, 0.05);
 	--content-color-recovery: rgba(255, 255, 255, 0.05);
 	--content-color-tools: rgba(255, 255, 255, 0.05);
+	--selection-color-intro: #bb86fc;
+	--selection-color-diet: #bb86fc;
+	--selection-color-exercise: #bb86fc;
+	--selection-color-recovery: #bb86fc;
+	--selection-color-tools: #bb86fc;
+	--selection-color-text-white: #000;
+	--selection-color-text-black: #000;
 }
 
 /* || GENERAL STYLING */
@@ -449,8 +463,8 @@ nav {
 		border 0.75s ease;
 
 	& ::selection {
-		color: black;
-		background: lightblue;
+		color: var(--selection-color-text-black);
+		background: var(--selection-color-intro);
 	}
 }
 
@@ -494,8 +508,8 @@ nav {
 		border 0.75s ease;
 
 	& ::selection {
-		color: white;
-		background: darkgreen;
+		color: var(--selection-color-text-white);
+		background: var(--selection-color-diet);
 	}
 }
 
@@ -544,8 +558,8 @@ nav {
 		border 0.75s ease;
 
 	& ::selection {
-		color: black;
-		background: lightcoral;
+		color: var(--selection-color-text-black);
+		background: var(--selection-color-exercise);
 	}
 }
 
@@ -594,8 +608,8 @@ nav {
 		border 0.75s ease;
 
 	& ::selection {
-		color: white;
-		background: purple;
+		color: var(--selection-color-text-white);
+		background: var(--selection-color-recovery);
 	}
 }
 
@@ -646,8 +660,8 @@ nav {
 		border 0.75s ease;
 
 	& ::selection {
-		color: white;
-		background: darkgoldenrod;
+		color: var(--selection-color-text-white);
+		background: var(--selection-color-tools);
 	}
 }
 
