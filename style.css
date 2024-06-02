@@ -44,11 +44,13 @@
 	--content-color-exercise: #5d0914;
 	--content-color-recovery: #ededfd;
 	--content-color-tools: #fee485;
+	--selection-color-main: #fff;
 	--selection-color-intro: #add8e6;
 	--selection-color-diet: #006400;
 	--selection-color-exercise: #f08080;
 	--selection-color-recovery: #800080;
 	--selection-color-tools: #b8860b;
+	--selection-color-text-blue: #0000ff;
 	--selection-color-text-white: #fff;
 	--selection-color-text-black: #000;
 }
@@ -71,7 +73,7 @@
 	--text-color-pneumatic: #bb86fc;
 	--text-color-tooltip: #121212;
 	--text-color-link: #bb86fc;
-	--tooltip-color: #bb86fc;
+	--tooltip-color: #d7dadc;
 	--icon-color-white: #d7dadc;
 	--icon-color-black: #000;
 	--icon-color-diet: #05c793;
@@ -97,11 +99,13 @@
 	--content-color-exercise: rgba(255, 255, 255, 0.05);
 	--content-color-recovery: rgba(255, 255, 255, 0.05);
 	--content-color-tools: rgba(255, 255, 255, 0.05);
+	--selection-color-main: #bb86fc;
 	--selection-color-intro: #bb86fc;
 	--selection-color-diet: #bb86fc;
 	--selection-color-exercise: #bb86fc;
 	--selection-color-recovery: #bb86fc;
 	--selection-color-tools: #bb86fc;
+	--selection-color-text-blue: #000;
 	--selection-color-text-white: #000;
 	--selection-color-text-black: #000;
 }
@@ -143,6 +147,11 @@ svg {
 		.svg-container svg {
 			margin-right: 10px;
 		}
+
+::selection {
+	color: var(--selection-color-text-blue);
+	background: var(--selection-color-main);
+}
 
 /* || SCROLLBAR STYLING */
 
