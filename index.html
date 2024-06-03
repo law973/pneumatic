@@ -314,7 +314,7 @@
 						</select><br><br>
 						<input type="submit" value="Calculate">
 					</form>
-					<p>Estimated maintenance calories:</p>
+					<p>Estimated maintenance calories: <span id="tdee_output"></span></p>
 				</div>
 				<!-- Calorie Goal Tool -->
 				<div>
@@ -353,6 +353,12 @@
 					<h2 class="svg-container">
 						Macro Goal
 					</h2>
+					<label for="protein">Protein</label>
+					<input type="number" id="protein" name="protein" min="0" max="999"><br>
+					<label for="carbs">Net Carbs</label>
+					<input type="number" id="carbs" name="carbs" min="o" max="999"><br>
+					<label for="fat">Fat</label>
+					<input type="number" id="fat" name="fat" min="0" max="999">
 				</div>
 				<!-- Plate Combination Creator Tool -->
 				<div>
@@ -388,10 +394,8 @@
 						<i class="fa-brands fa-github"></i>
 					</a>
 				</div>
-				<!-- Copyright Text -->
-				<div>
+				<!-- Footer Text -->
 					<small>&copy; 2024 - Levi Wright</small>
-				</div>
 			</footer>
 		</section>
 	</main>
