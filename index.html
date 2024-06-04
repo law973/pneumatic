@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,40 +33,41 @@
 			</ul>
 		</nav>
 	</div>
+	<!-- Dark Mode Switch -->
+	<div id="theme-switcher" class="theme-switcher" title="Light/Dark Theme">
+		<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
+			<path d="M524-40q-84 0-157.5-32t-128-86.5Q184-213 152-286.5T120-444q0-146 93-257.5T450-840q-18 99 11 193.5T561-481q71 71 165.5 100T920-370q-26 144-138 237T524-40Zm0-80q88 0 163-44t118-121q-86-8-163-43.5T504-425q-61-61-97-138t-43-163q-77 43-120.5 118.5T200-444q0 135 94.5 229.5T524-120Zm-20-305Z" id="moon_icon"/>
+			<path d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l57-56 113 113-56 54Zm508 512L651-255l54-54 114 110-57 59ZM40-440v-80h160v80H40Zm157 300-56-57 112-112 29 27 29 28-114 114Zm283-100q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-160Z" id="sun_icon"/>
+		</svg>
+	</div>
+	<!-- Greeting Section -->
+	<section>
+		<!-- Header -->
+		<header id="greeting">
+			<!-- Greeting Text -->
+			<div>
+				<h1 id="greeting_hello">
+					<span>H</span><span>e</span><span>l</span><span>l</span><span>o</span><span>!</span>
+				</h1> 
+				<h2 id="greeting_welcome">Welcome to 
+					<em class="tooltip"> 
+						<span id="greeting_pneumatic">Pneumatic</span>
+						<span class="tooltiptext">/no͞oˈmadik/</span> 
+					</em>
+				</h2>
+			</div>
+			<!-- Greeting Arrow -->
+			<div id="greeting_arrow">
+				<a href="#introduction" title="Introduction">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" id="arrow">
+						<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+					</svg>
+				</a>
+			</div>
+		</header>
+	</section>
+	<!-- Main Content -->
 	<main>
-		<!-- Dark Mode Switch -->
-		<div id="theme-switcher" class="theme-switcher" title="Light/Dark Theme">
-			<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24">
-				<path d="M524-40q-84 0-157.5-32t-128-86.5Q184-213 152-286.5T120-444q0-146 93-257.5T450-840q-18 99 11 193.5T561-481q71 71 165.5 100T920-370q-26 144-138 237T524-40Zm0-80q88 0 163-44t118-121q-86-8-163-43.5T504-425q-61-61-97-138t-43-163q-77 43-120.5 118.5T200-444q0 135 94.5 229.5T524-120Zm-20-305Z" id="moon_icon"/>
-				<path d="M440-760v-160h80v160h-80Zm266 110-55-55 112-115 56 57-113 113Zm54 210v-80h160v80H760ZM440-40v-160h80v160h-80ZM254-652 140-763l57-56 113 113-56 54Zm508 512L651-255l54-54 114 110-57 59ZM40-440v-80h160v80H40Zm157 300-56-57 112-112 29 27 29 28-114 114Zm283-100q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm0-80q66 0 113-47t47-113q0-66-47-113t-113-47q-66 0-113 47t-47 113q0 66 47 113t113 47Zm0-160Z" id="sun_icon"/>
-			</svg>
-		</div>
-		<!-- Greeting Section -->
-		<section>
-			<!-- Header -->
-			<header id="greeting">
-				<!-- Greeting Text -->
-				<div>
-					<h1 id="greeting_hello">
-						<span>H</span><span>e</span><span>l</span><span>l</span><span>o</span><span>!</span>
-					</h1> 
-					<h2 id="greeting_welcome">Welcome to 
-						<em class="tooltip"> 
-							<span id="greeting_pneumatic">Pneumatic</span>
-							<span class="tooltiptext">/no͞oˈmadik/</span> 
-						</em>
-					</h2>
-				</div>
-				<!-- Greeting Arrow -->
-				<div id="greeting_arrow">
-					<a href="#introduction" title="Introduction">
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6" id="arrow">
-							<path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-						</svg>
-					</a>
-				</div>
-			</header>
-		</section>
 		<!-- Introduction Section -->
 		<section id="introduction">
 			<!-- Introduction Content Container -->
@@ -117,10 +118,10 @@
 						Before getting into the finer details, there may be a couple of small 
 						adjustments you can make to your diet that will result in big 
 						differences.<br><br>
-	
+
 						First: avoid fast food and sweets.
 					</p>
-	
+
 					<p>
 						Fast food is usually high in sodium, sugar, saturated fats, and trans 
 						fats, amongst other things. On top of that, it tends to be very
@@ -222,26 +223,26 @@
 						The tools in this section will help in putting all of the knowledge 
 						provided previously to use.
 					</p>
-	
+
 					<p>
 						The Total Daily Energy Expenditure (TDEE) Calculator will give an 
 						estimate of the amount of calories you are burning each day, after 
 						the required information is submitted.
 					</p>
-	
+
 					<p>
 						Calorie Goal will give a target for your daily caloric intake based on
 						your estimated TDEE and the amount of weight you wish to gain, 
 						lose, or maintain each week.
 					</p>
-	
+
 					<p>
 						The Plate Combination Creator will show you which pairs of plates 
 						will need to be used together in order to reach the desired amount 
 						of weight on your barbell (assuming you are using an olympic bar,
 						which weighs approximately 45lbs by itself).
 					</p>
-	
+
 					<p>
 						Sleep Time Recommendation will suggest a time to go to sleep at 
 						based on the time you wish to wake up. Alternatively, it can
@@ -254,9 +255,7 @@
 						<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="tools_icon">
 							<path d="M320-240h60v-80h80v-60h-80v-80h-60v80h-80v60h80v80Zm200-30h200v-60H520v60Zm0-100h200v-60H520v60Zm44-152 56-56 56 56 42-42-56-58 56-56-42-42-56 56-56-56-42 42 56 56-56 58 42 42Zm-314-70h200v-60H250v60Zm-50 472q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z"/>
 						</svg>
-						<p>
-							<abbr title="Total Daily Energy Expenditure">TDEE</abbr> Calculator
-						</p>
+						<abbr title="Total Daily Energy Expenditure">TDEE</abbr>&nbsp;Calculator
 					</h2>
 					<form id="form_tdee">
 						<fieldset>
@@ -325,7 +324,7 @@
 						Calorie Goal
 					</h2>
 					<div class="slide-container">
-						<p>Rate: <span id="calorie_goal_output"></span></p>
+						<label for="calorie_goal_slider">Rate: <span id="calorie_goal_output"></span></label>
 						<input type="range" min="1" max="17" value="9" class="slider" id="calorie_goal_slider">
 						<div id="tickmarks">
 							<p>-2.00</p>
@@ -375,30 +374,30 @@
 				</div>
 			</div>
 		</section>
-		<!-- Last Section -->
-		<section>
-			<!-- Footer -->
-			<footer>
-				<!-- Home Arrow -->
-				<div>
-					<a rel="noreferrer" href="#greeting" title="Back to Home">
-						<i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-					</a>
-				</div>
-				<!-- Social Links -->
-				<div class="social_links">
-					<a rel="noreferrer" href="https://www.linkedin.com/in/levi-arthur-wright/" target="_blank" title="LinkedIn Profile">
-						<i class="fa-brands fa-linkedin-in"></i>
-					</a>
-					<a rel="noreferrer" href="https://github.com/law973" target="_blank" title="GitHub Profile">
-						<i class="fa-brands fa-github"></i>
-					</a>
-				</div>
-				<!-- Footer Text -->
-					<small>&copy; 2024 - Levi Wright</small>
-			</footer>
-		</section>
 	</main>
+	<!-- Last Section -->
+	<section>
+		<!-- Footer -->
+		<footer>
+			<!-- Home Arrow -->
+			<div>
+				<a rel="noreferrer" href="#greeting" title="Back to Home">
+					<i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+				</a>
+			</div>
+			<!-- Social Links -->
+			<div class="social_links">
+				<a rel="noreferrer" href="https://www.linkedin.com/in/levi-arthur-wright/" target="_blank" title="LinkedIn Profile">
+					<i class="fa-brands fa-linkedin-in"></i>
+				</a>
+				<a rel="noreferrer" href="https://github.com/law973" target="_blank" title="GitHub Profile">
+					<i class="fa-brands fa-github"></i>
+				</a>
+			</div>
+			<!-- Footer Text -->
+				<small>&copy; 2024 - Levi Wright</small>
+		</footer>
+	</section>
 	<!-- Script -->
 	<script src="script.js"></script>
 </body>
