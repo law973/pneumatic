@@ -324,7 +324,7 @@
 						Calorie Goal
 					</h2>
 					<div class="slide-container">
-						<label for="calorie_goal_slider">Rate: <span id="calorie_goal_output"></span></label>
+						<label for="calorie_goal_slider"><b>Rate:</b> <span id="calorie_goal_output"></span></label>
 						<input type="range" min="1" max="17" value="9" class="slider" id="calorie_goal_slider">
 						<div id="tickmarks">
 							<p>-2.00</p>
@@ -352,12 +352,14 @@
 					<h2 class="svg-container">
 						Macro Goal
 					</h2>
-					<label for="protein">Protein</label>
-					<input type="number" id="protein" name="protein" min="0" max="999"><br>
-					<label for="carbs">Net Carbs</label>
-					<input type="number" id="carbs" name="carbs" min="o" max="999"><br>
-					<label for="fat">Fat</label>
-					<input type="number" id="fat" name="fat" min="0" max="999">
+					<div id="macro-input-container">
+						<label for="protein">Protein</label>
+						<input type="number" id="protein" name="protein" min="0" max="999"><br>
+						<label for="carbs">Net Carbs</label>
+						<input type="number" id="carbs" name="carbs" min="o" max="999"><br>
+						<label for="fat">Fat</label>
+						<input type="number" id="fat" name="fat" min="0" max="999">
+					</div>
 				</div>
 				<!-- Plate Combination Creator Tool -->
 				<div>

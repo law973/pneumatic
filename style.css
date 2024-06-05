@@ -704,6 +704,16 @@ nav {
 		text-align: center;
 	}
 
+#macro-input-container {
+	display: flex;
+	flex-direction: column;
+}
+
+	#macro-input-container label {
+		text-align: left;
+		font-weight: bold;
+	}
+
 .tools_icon {
 	fill: var(--icon-color-tools);
 	transition: fill 0.75s ease;
@@ -711,7 +721,13 @@ nav {
 
 .slide-container {
 	width: 100%;
+	display: flex;
+	flex-direction: column;
 }
+
+	.slide-container label {
+		text-align: left;
+	}
 
 .slider {
 	appearance: none;
@@ -843,4 +859,28 @@ footer {
 	transition: transform 0.25s linear;
 
 	&:hover { transform: scale(1.1); }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+	#greeting_hello span {
+		opacity: 1;
+		transform: translateY(0);
+		animation: none;
+	}
+
+	#greeting_welcome {
+		opacity: 1;
+		animation: none;
+	}
+
+	#greeting_arrow {
+		opacity: 1;
+		animation: none;
+	}
+}
+
+/* Print */
+@media print {
+
 }
