@@ -4,44 +4,51 @@ const themeSwitcher = document.getElementById('theme-switcher');
 const sunIcon = document.getElementById('sun_icon');
 const moonIcon = document.getElementById('moon_icon');
 
-const lightTheme = () => {
-    sunIcon.style.visibility = "hidden";
-    moonIcon.style.visibility = "visible";
-    themeSwitcher.title = "Dark Theme";
+// Update Theme Icon & Text
+const updateThemeIcon = (isDarkMode) => {
+    sunIcon.style.visibility = isDarkMode ? "visible" : "hidden";
+    moonIcon.style.visibility = isDarkMode ? "hidden" : "visible";
+    themeSwitcher.title = isDarkMode ? "Light Theme" : "Dark Theme";
+}
+  
+// Determine if dark mode is preferred
+const prefersDarkMode = () => window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+// Set the theme based on the preference
+const setThemeBasedOnPreference = () => {
+    const isDarkMode = prefersDarkMode();
+    document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light');
+    updateThemeIcon(isDarkMode);
 }
 
-const darkTheme = () => {
-    moonIcon.style.visibility = "hidden";
-    sunIcon.style.visibility = "visible";
-    themeSwitcher.title = "Light Theme";
-}
-
+// Switch Theme 
 const switchTheme = () => {
     const currentTheme = document.documentElement.getAttribute('data-theme');
-    if (!currentTheme || currentTheme === 'light') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        darkTheme();
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon(newTheme === 'dark');
+}
+
+// Event Listener
+themeSwitcher.addEventListener('click', switchTheme);
+
+// Check Local Storage For Theme
+const initializeTheme = () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme === 'dark');
     } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        lightTheme();
+        setThemeBasedOnPreference();
     }
 }
 
-themeSwitcher.addEventListener('click', switchTheme);
+// Listen for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', setThemeBasedOnPreference);
 
-// Check Local Storage For Theme ----------
-
-// const currentThemeFromLocalStorage = localStorage.getItem('theme');
-// if (currentThemeFromLocalStorage) {
-//     document.documentElement.setAttribute('data-theme', currentThemeFromLocalStorage);
-//     if (currentThemeFromLocalStorage === 'dark') {
-//       darkMode();
-//     } else {
-//       lightMode();
-//     }
-//   }
+// Initialize theme when the script loads
+initializeTheme();
 
 // TDEE Calculator Form Functionality ----------
 
