@@ -1,0 +1,23 @@
+/* || REDUCED MOTION */
+@media (prefers-reduced-motion: reduce) {
+	#greeting_hello span {
+		opacity: 1;
+		transform: translateY(0);
+		animation: none;
+	}
+
+	#greeting_welcome {
+		opacity: 1;
+		animation: none;
+	}
+
+	#greeting_arrow {
+		opacity: 1;
+		animation: none;
+	}
+}
+
+/* || PRINT STYLES */
+@media print {
+
+}
