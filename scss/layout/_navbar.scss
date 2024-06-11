@@ -27,6 +27,20 @@
         &:hover div {
             background-color: var(--navigation-color-hover);
         }
+
+        &.active {
+            .bar1 {
+                transform: translateY(0.6rem) rotate(-45deg);
+            }
+        
+            .bar2 {
+                opacity: 0;
+            }
+        
+            .bar3 {
+                transform: translateY(-0.75rem) rotate(45deg);
+            }
+        }
     }
 
     nav {
@@ -71,21 +85,28 @@
                 }
             }
         }
+
+        &.active {
+            transform: translateX(0);
+        }
     }
 }
 
-.active {
-    transform: translateX(0);
+/* || LIGHT & DARK THEME SWITCHER */
+#theme-switcher {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	border-radius: 25%;
+	cursor: pointer;
+	z-index: 100;
+}
 
-    .bar1 {
-        transform: translateY(0.6rem) rotate(-45deg);
-    }
+#sun_icon, #moon_icon {
+	fill: var(--icon-color-white);
+	transition: fill 0.75s ease;
+}
 
-    .bar2 {
-        opacity: 0;
-    }
-
-    .bar3 {
-        transform: translateY(-0.75rem) rotate(45deg);
-    }
+#sun_icon {
+	visibility: hidden;
 }

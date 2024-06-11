@@ -1,0 +1,49 @@
+/* || INTRODUCTION PAGE STYLING */
+#introduction {
+	width: 100vw;
+	height: 100vh;
+	max-width: 100%;
+	max-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+	#introduction a {
+		text-decoration: none;
+		color: var(--text-color-white);
+		transition: color 0.75s ease;
+
+		&:hover {
+			text-decoration: underline;
+			color: var(--text-color-link);
+		}
+	}
+
+#introduction_content {
+	/* fallback font-size*/
+	font-size: 3em;
+	font-size: 1.25vmax;
+	background-color: var(--content-color-intro);
+	padding: 0 25px;
+	border: 3px solid var(--outline-color-intro);
+	border-radius: 25px;
+	box-shadow:
+  		1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
+		3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
+		6.8px 6.8px 7.7px rgba(0, 0, 0, 0.032),
+		11.2px 11.2px 12.8px rgba(0, 0, 0, 0.038),
+		18.5px 18.5px 21.2px rgba(0, 0, 0, 0.044),
+		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
+		70px 70px 80px rgba(0, 0, 0, 0.07)
+	;
+	transition: 
+		background-color 0.75s ease, 
+		border 0.75s ease;
+
+	& ::selection {
+		color: var(--selection-color-text-black);
+		background: var(--selection-color-intro);
+	}
+}

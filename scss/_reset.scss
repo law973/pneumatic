@@ -1,0 +1,41 @@
+/* || GENERAL STYLING */
+html {
+	font-size: 16px;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+	text-align: center;
+	min-height: 100vh;
+	background-color: var(--bg-color-main);
+	color: var(--text-color-white);
+	margin: 0;
+	transition: 
+		background-color 0.75s ease, 
+		color 0.75s ease;
+}
+
+p {
+	text-align: left;
+	max-width: 75ch;
+}
+
+svg {
+	width: 36px;
+	height: 36px;
+}
+
+	.svg-container {
+		display: flex;
+		align-items: center;
+	}
+
+		.svg-container svg {
+			margin-right: 10px;
+		}
+
+::selection {
+	color: var(--selection-color-text-blue);
+	background: var(--selection-color-main);
+}

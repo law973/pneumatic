@@ -1,0 +1,137 @@
+/* || GREETING PAGE STYLING */
+#greeting {
+	width: 100vw;
+	height: 100vh;
+	max-width: 100%;
+	max-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+	#greeting a {
+		color: var(--text-color-link);
+		transition: color 0.75s ease;
+	}
+
+#greeting_hello {
+	font-size: clamp(2rem, 4vw, 7rem);
+}
+
+	#greeting_hello span {
+		display: inline-block;
+		opacity: 0;
+		transform: translateY(1em);
+		animation: helloMove 0.35s forwards;
+	}
+
+		#greeting_hello span:nth-child(1) {
+			animation-delay: 0.25s;
+		}
+  
+		#greeting_hello span:nth-child(2) {
+			animation-delay: 0.4s;
+		}
+  
+		#greeting_hello span:nth-child(3) {
+			animation-delay: 0.55s;
+		}
+
+		#greeting_hello span:nth-child(4) {
+			animation-delay: 0.7s;
+		}
+  
+		#greeting_hello span:nth-child(5) {
+			animation-delay: 0.85s;
+		}
+  
+		#greeting_hello span:nth-child(6) {
+			animation-delay: 1s;
+		}
+
+#greeting_welcome {
+	/* fallback font-size*/
+	font-size: 3em;
+	font-size: 2vmax;
+	opacity: 0;
+	animation: welcomeAppear 1.25s forwards;
+	animation-delay: 1.75s;
+}
+
+#greeting_pneumatic {
+	color: var(--text-color-pneumatic);
+	transition: color 0.75s ease;
+}
+
+#greeting_arrow {
+	position: absolute;
+	bottom: 0;
+	opacity: 0;
+	animation: welcomeAppear 1.25s forwards, downArrowMove 1.25s ease-in-out infinite alternate;
+	animation-delay: 2.75s;
+}
+
+#arrow {
+	/* fallback width */
+	width: 102px;
+	width: 4vmax;
+	height: auto;
+}
+
+.tooltip {
+	position: relative;
+	display: inline-block;
+}
+
+	/* tooltip text */
+	.tooltip .tooltiptext {
+		font-size: x-large;
+		text-align: center;
+		visibility: hidden;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		width: 150px;
+		background-color: var(--tooltip-color);
+		color: var(--text-color-tooltip);
+		margin-left: -75px;
+		padding: 5px 0;
+		border-radius: 6px;
+		z-index: 1;
+	}
+  
+	/* show tooltip text when you mouse over tooltip container */
+	.tooltip:hover .tooltiptext {
+		visibility: visible;
+	}
+
+	.tooltip .tooltiptext::after {
+		content: " ";
+		position: absolute;
+		bottom: 100%;  /* at top of tooltip */
+		left: 50%;
+		margin-left: -5px;
+		border-width: 5px;
+		border-style: solid;
+		border-color: transparent transparent var(--tooltip-color) transparent;
+	}
+
+@keyframes helloMove {
+	50%	{ transform: translateY(-1.5em); }
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes welcomeAppear {
+	to { opacity: 1; }
+}
+
+@keyframes downArrowMove {
+	0% { transform: translate(0, 0); }
+	100% {
+		transform: translate(0, -33%);
+	}
+}
