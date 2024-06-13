@@ -2,6 +2,7 @@
 $font-stack: 'Nunito', sans-serif;
 
 :root {
+	--elevation-color-one: none;
 	--navigation-color-icon: #fff;
 	--navigation-color-hover: #ebebeb;
 	--scrollbar-color-thumb: #fff;
@@ -13,7 +14,7 @@ $font-stack: 'Nunito', sans-serif;
 	--bg-color-recovery: #bbbdf6;
 	--bg-color-tools: #fec601;
 	--bg-color-nav: rgba(0, 0, 255, 0.5);
-	--bg-color-footer: #0000ff;
+	--bg-color-footer: var(--bg-color-main);
 	--text-color-white: #fff;
 	--text-color-black: #000;
 	--text-color-pneumatic: #fff;
@@ -39,7 +40,6 @@ $font-stack: 'Nunito', sans-serif;
 	--form-color-button: #0000ff;
 	--slider-color-background: #fff;
 	--slider-color-thumb: #0000ff;
-	--footer-color-border: #0000ff;
 	--content-color-intro: #00008f;
 	--content-color-diet: #9cfce3;
 	--content-color-exercise: #5d0914;
@@ -54,9 +54,18 @@ $font-stack: 'Nunito', sans-serif;
 	--selection-color-text-blue: #0000ff;
 	--selection-color-text-white: #fff;
 	--selection-color-text-black: #000;
+	--smooth-shadow: 
+	1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
+	3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
+	6.8px 6.8px 7.7px rgba(0, 0, 0, 0.032),
+	11.2px 11.2px 12.8px rgba(0, 0, 0, 0.038),
+	18.5px 18.5px 21.2px rgba(0, 0, 0, 0.044),
+	32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
+	70px 70px 80px rgba(0, 0, 0, 0.07);
 }
 
 [data-theme="dark"] {
+	--elevation-color-one: #1e1e1e;
 	--navigation-color-icon: #d7dadc;
 	--navigation-color-hover: #bb86fc;
 	--scrollbar-color-thumb: #d7dadc;
@@ -67,8 +76,8 @@ $font-stack: 'Nunito', sans-serif;
 	--bg-color-exercise: #121212;
 	--bg-color-recovery: #121212;
 	--bg-color-tools: #121212;
-	--bg-color-nav: #1e1e1e;
-	--bg-color-footer: rgba(255, 255, 255, 0.05);
+	--bg-color-nav: var(--elevation-color-one);
+	--bg-color-footer: var(--elevation-color-one);
 	--text-color-white: #d7dadc;
 	--text-color-black: #d7dadc;
 	--text-color-pneumatic: #bb86fc;
@@ -94,12 +103,11 @@ $font-stack: 'Nunito', sans-serif;
 	--form-color-button: #3700b3;
 	--slider-color-background: #d7dadc;
 	--slider-color-thumb: #3700b3;
-	--footer-color-border: #d7dadc;
-	--content-color-intro: rgba(255, 255, 255, 0.05);
-	--content-color-diet: rgba(255, 255, 255, 0.05);
-	--content-color-exercise: rgba(255, 255, 255, 0.05);
-	--content-color-recovery: rgba(255, 255, 255, 0.05);
-	--content-color-tools: rgba(255, 255, 255, 0.05);
+	--content-color-intro: var(--elevation-color-one);
+	--content-color-diet: var(--elevation-color-one);
+	--content-color-exercise: var(--elevation-color-one);
+	--content-color-recovery: var(--elevation-color-one);
+	--content-color-tools: var(--elevation-color-one);
 	--selection-color-main: #bb86fc;
 	--selection-color-intro: #bb86fc;
 	--selection-color-diet: #bb86fc;
@@ -109,4 +117,5 @@ $font-stack: 'Nunito', sans-serif;
 	--selection-color-text-blue: #000;
 	--selection-color-text-white: #000;
 	--selection-color-text-black: #000;
+	--smooth-shadow: none;
 }

@@ -1,0 +1,20 @@
+// Extends for common styles
+
+// Mixins for common styles
+
+// Media Queries
+@media (prefers-reduced-motion: reduce) {
+	
+}
+
+@mixin reduced-motion {
+    @media (prefers-reduced-motion: reduce) {
+        @content;
+    }
+}
+
+@mixin print-style {
+    @media print {
+        @content;
+    }
+}
