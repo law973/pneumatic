@@ -5,35 +5,34 @@
 	min-height: 100vh;
 	background-color: var(--bg-color-recovery);
 	color: var(--text-color-black);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	display: grid;
+	place-items: center;
 	transition: 
 		background-color 0.75s ease, 
 		color 0.75s ease;
-}
 
-#recovery_content {
-	/* fallback font-size*/
-	font-size: 3em;
-	font-size: 1.25vmax;
-	background-color: var(--content-color-recovery);
-	padding: 0 25px;
-	border: 3px solid var(--outline-color-recovery);
-	border-radius: 25px;
-	box-shadow: var(--smooth-shadow);
-	transition: 
-		background-color 0.75s ease, 
-		border 0.75s ease;
+	#recovery_content {
+		/* fallback font-size*/
+		font-size: 3em;
+		font-size: 1.25vmax;
+		background-color: var(--content-color-recovery);
+		padding: 0 25px;
+		border: 3px solid var(--outline-color-recovery);
+		border-radius: 25px;
+		box-shadow: var(--smooth-shadow);
+		transition: 
+			background-color 0.75s ease, 
+			border 0.75s ease,
+			box-shadow 0.75s ease;
+	
+		& ::selection {
+			color: var(--selection-color-text-white);
+			background: var(--selection-color-recovery);
+		}
 
-	& ::selection {
-		color: var(--selection-color-text-white);
-		background: var(--selection-color-recovery);
+		.recovery_icon {
+			fill: var(--icon-color-recovery);
+			transition: fill 0.75s ease;
+		}
 	}
-}
-
-.recovery_icon {
-	fill: var(--icon-color-recovery);
-	transition: fill 0.75s ease;
 }

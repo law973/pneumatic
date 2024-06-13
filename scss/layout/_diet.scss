@@ -5,35 +5,34 @@
 	min-height: 100vh;
 	background-color: var(--bg-color-diet);
 	color: var(--text-color-black);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	display: grid;
+	place-items: center;
 	transition: 
 		background-color 0.75s ease, 
 		color 0.75s ease;
-}
 
-#diet_content {
-	/* fallback font-size*/
-	font-size: 3em;
-	font-size: 1.25vmax;
-	background-color: var(--content-color-diet);
-	padding: 0 25px;
-	border: 3px solid var(--outline-color-diet);
-	border-radius: 25px;
-	box-shadow: var(--smooth-shadow);
-	transition: 
-		background-color 0.75s ease, 
-		border 0.75s ease;
+	#diet_content {
+		/* fallback font-size*/
+		font-size: 3em;
+		font-size: 1.25vmax;
+		background-color: var(--content-color-diet);
+		padding: 0 25px;
+		border: 3px solid var(--outline-color-diet);
+		border-radius: 25px;
+		box-shadow: var(--smooth-shadow);
+		transition: 
+			background-color 0.75s ease, 
+			border 0.75s ease,
+			box-shadow 0.75s ease;
+	
+		& ::selection {
+			color: var(--selection-color-text-white);
+			background: var(--selection-color-diet);
+		}
 
-	& ::selection {
-		color: var(--selection-color-text-white);
-		background: var(--selection-color-diet);
+		.diet_icon {
+			fill: var(--icon-color-diet);
+			transition: fill 0.75s ease;
+		}
 	}
-}
-
-.diet_icon {
-	fill: var(--icon-color-diet);
-	transition: fill 0.75s ease;
 }

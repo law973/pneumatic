@@ -1,7 +1,10 @@
-/* || GENERAL STYLING */
 html {
 	font-size: 16px;
 	scroll-behavior: smooth;
+
+	@include reduced-motion {
+		scroll-behavior: auto;
+	}
 }
 
 body {
@@ -26,14 +29,14 @@ svg {
 	height: 36px;
 }
 
-	.svg-container {
-		display: flex;
-		align-items: center;
-	}
+.svg-container {
+	display: flex;
+	align-items: center;
 
-		.svg-container svg {
-			margin-right: 10px;
-		}
+	svg {
+		margin-right: 10px;
+	}
+}
 
 ::selection {
 	color: var(--selection-color-text-blue);

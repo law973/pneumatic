@@ -1,15 +1,17 @@
 #introduction {
 	width: 100vw;
-	height: 100vh;
+	height: fit-content;
 	max-width: 100%;
-	max-height: 100vh;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
+	min-height: 100vh;
+	background-color: var(--bg-color-main);
+	color: var(--text-color-white);
+	display: grid;
+	place-items: center;
+	transition: 
+		background-color 0.75s ease, 
+		color 0.75s ease;
 
-	#introduction a {
+	a {
 		text-decoration: none;
 		color: var(--text-color-white);
 		transition: color 0.75s ease;
@@ -20,21 +22,23 @@
 		}
 	}
 
-#introduction_content {
-	/* fallback font-size*/
-	font-size: 3em;
-	font-size: 1.25vmax;
-	background-color: var(--content-color-intro);
-	padding: 0 25px;
-	border: 3px solid var(--outline-color-intro);
-	border-radius: 25px;
-	box-shadow:	var(--smooth-shadow);
-	transition: 
-		background-color 0.75s ease, 
-		border 0.75s ease;
-
-	& ::selection {
-		color: var(--selection-color-text-black);
-		background: var(--selection-color-intro);
+	#introduction_content {
+		/* fallback font-size*/
+		font-size: 3em;
+		font-size: 1.25vmax;
+		background-color: var(--content-color-intro);
+		padding: 0 25px;
+		border: 3px solid var(--outline-color-intro);
+		border-radius: 25px;
+		box-shadow:	var(--smooth-shadow);
+		transition: 
+			background-color 0.75s ease, 
+			border 0.75s ease,
+			box-shadow 0.75s ease;
+	
+		& ::selection {
+			color: var(--selection-color-text-black);
+			background: var(--selection-color-intro);
+		}
 	}
 }
