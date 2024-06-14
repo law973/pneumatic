@@ -1,15 +1,5 @@
 #tools {
-	width: 100vw;
-	height: fit-content;
-	max-width: 100%;
-	min-height: 100vh;
-	background-color: var(--bg-color-tools);
-	color: var(--text-color-black);
-	display: grid;
-	place-items: center;
-	transition: 
-		background-color 0.75s ease, 
-		color 0.75s ease;
+	@include section-color(var(--bg-color-tools), var(--text-color-black), var(--selection-color-tools), var(--selection-color-text-white));
 
 	#tools_content {
 		/* fallback font-size*/
@@ -26,11 +16,6 @@
 			background-color 0.75s ease, 
 			border 0.75s ease,
 			box-shadow 0.75s ease;
-	
-		& ::selection {
-			color: var(--selection-color-text-white);
-			background: var(--selection-color-tools);
-		}
 
 		.tools_icon {
 			fill: var(--icon-color-tools);
@@ -49,11 +34,6 @@
 				border-color: var(--outline-color-tools);
 				transition: border 0.75s ease;
 			}
-		
-			label {
-				text-align: left;
-				font-weight: bold;
-			}
 		}
 
 		#tickmarks {
@@ -70,11 +50,6 @@
 		#macro-input-container {
 			display: flex;
 			flex-direction: column;
-		
-			label {
-				text-align: left;
-				font-weight: bold;
-			}
 		}
 
 		.slide-container {
@@ -82,13 +57,8 @@
 			display: flex;
 			flex-direction: column;
 		
-			label {
-				text-align: left;
-				font-weight: bold;
-		
-				span {
-					font-weight: normal;
-				}
+			label span {
+				font-weight: normal;
 			}
 
 			.slider {

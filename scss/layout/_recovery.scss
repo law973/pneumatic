@@ -1,15 +1,5 @@
 #recovery {
-	width: 100vw;
-	height: fit-content;
-	max-width: 100%;
-	min-height: 100vh;
-	background-color: var(--bg-color-recovery);
-	color: var(--text-color-black);
-	display: grid;
-	place-items: center;
-	transition: 
-		background-color 0.75s ease, 
-		color 0.75s ease;
+	@include section-color(var(--bg-color-recovery), var(--text-color-black), var(--selection-color-recovery), var(--selection-color-text-white));
 
 	#recovery_content {
 		/* fallback font-size*/
@@ -24,11 +14,6 @@
 			background-color 0.75s ease, 
 			border 0.75s ease,
 			box-shadow 0.75s ease;
-	
-		& ::selection {
-			color: var(--selection-color-text-white);
-			background: var(--selection-color-recovery);
-		}
 
 		.recovery_icon {
 			fill: var(--icon-color-recovery);

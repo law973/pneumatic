@@ -1,10 +1,5 @@
 #greeting {
-	width: 100vw;
-	height: 100vh;
-	max-width: 100%;
-	max-height: 100vh;
-	display: grid;
-	place-items: center;
+	@include section-color(var(--bg-color-main), var(--text-color-white), var(--selection-color-main), var(--selection-color-text-black));
 
 	a {
 		color: var(--text-color-link);

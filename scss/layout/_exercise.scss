@@ -1,15 +1,5 @@
 #exercise {
-	width: 100vw;
-	height: fit-content;
-	max-width: 100%;
-	min-height: 100vh;
-	background-color: var(--bg-color-exercise);
-	color: var(--text-color-white);
-	display: grid;
-	place-items: center;
-	transition: 
-		background-color 0.75s ease, 
-		color 0.75s ease;
+	@include section-color(var(--bg-color-exercise), var(--text-color-white), var(--selection-color-exercise), var(--selection-color-text-black));
 
 	#exercise_content {
 		/* fallback font-size*/
@@ -24,11 +14,6 @@
 			background-color 0.75s ease, 
 			border 0.75s ease,
 			box-shadow 0.75s ease;
-	
-		& ::selection {
-			color: var(--selection-color-text-black);
-			background: var(--selection-color-exercise);
-		}
 
 		.exercise_icon {
 			fill: var(--icon-color-exercise);

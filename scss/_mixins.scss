@@ -1,12 +1,16 @@
 // Extends for common styles
 
 // Mixins for common styles
-
-// Media Queries
-@media (prefers-reduced-motion: reduce) {
-	
+@mixin section-color($bg-color, $color, $selection-bg-color, $selection-color) {
+    background-color: $bg-color;
+	color: $color;
+    ::selection {
+		color: $selection-bg-color;
+		background: $selection-color;
+	}
 }
 
+// Media Queries
 @mixin reduced-motion {
     @media (prefers-reduced-motion: reduce) {
         @content;
@@ -17,4 +21,17 @@
     @media print {
         @content;
     }
+}
+
+// Classes
+.major {
+    height: fit-content;
+    min-height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    display: grid;
+	place-items: center;
+    transition: 
+		background-color 0.75s ease, 
+		color 0.75s ease;
 }

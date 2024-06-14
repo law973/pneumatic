@@ -1,15 +1,5 @@
 #introduction {
-	width: 100vw;
-	height: fit-content;
-	max-width: 100%;
-	min-height: 100vh;
-	background-color: var(--bg-color-main);
-	color: var(--text-color-white);
-	display: grid;
-	place-items: center;
-	transition: 
-		background-color 0.75s ease, 
-		color 0.75s ease;
+	@include section-color(var(--bg-color-main), var(--text-color-white), var(--selection-color-intro), var(--selection-color-text-black));
 
 	a {
 		text-decoration: none;
@@ -35,10 +25,5 @@
 			background-color 0.75s ease, 
 			border 0.75s ease,
 			box-shadow 0.75s ease;
-	
-		& ::selection {
-			color: var(--selection-color-text-black);
-			background: var(--selection-color-intro);
-		}
 	}
 }
