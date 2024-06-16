@@ -2,22 +2,11 @@
 	@include section-color(var(--bg-color-exercise), var(--text-color-white), var(--selection-color-exercise), var(--selection-color-text-black));
 
 	#exercise_content {
-		/* fallback font-size*/
-		font-size: 3em;
-		font-size: 1.25vmax;
 		background-color: var(--content-color-exercise);
-		padding: 0 25px;
-		border: 3px solid var(--outline-color-exercise);
-		border-radius: 25px;
-		box-shadow: var(--smooth-shadow);
-		transition: 
-			background-color 0.75s ease, 
-			border 0.75s ease,
-			box-shadow 0.75s ease;
+		border-color: var(--outline-color-exercise);
 
 		.exercise_icon {
-			fill: var(--icon-color-exercise);
-			transition: fill 0.75s ease;
+			fill: var(--outline-color-exercise);
 		}
 	}
 }

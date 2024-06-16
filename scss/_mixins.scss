@@ -35,3 +35,22 @@
 		background-color 0.75s ease, 
 		color 0.75s ease;
 }
+
+.major-content-container {
+    /* fallback font-size*/
+		font-size: 3em;
+		font-size: 1.25vmax;
+        padding: 0 25px;
+        border-radius: 25px;
+        border: 3px solid;
+
+        box-shadow:	var(--smooth-shadow);
+		transition: 
+			background-color 0.75s ease, 
+			border 0.75s ease,
+			box-shadow 0.75s ease;
+}
+
+.icon {
+    transition: fill 0.75s ease;
+}

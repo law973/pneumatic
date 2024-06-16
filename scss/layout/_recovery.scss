@@ -2,22 +2,11 @@
 	@include section-color(var(--bg-color-recovery), var(--text-color-black), var(--selection-color-recovery), var(--selection-color-text-white));
 
 	#recovery_content {
-		/* fallback font-size*/
-		font-size: 3em;
-		font-size: 1.25vmax;
 		background-color: var(--content-color-recovery);
-		padding: 0 25px;
-		border: 3px solid var(--outline-color-recovery);
-		border-radius: 25px;
-		box-shadow: var(--smooth-shadow);
-		transition: 
-			background-color 0.75s ease, 
-			border 0.75s ease,
-			box-shadow 0.75s ease;
+		border-color: var(--outline-color-recovery);
 
 		.recovery_icon {
-			fill: var(--icon-color-recovery);
-			transition: fill 0.75s ease;
+			fill: var(--outline-color-recovery);
 		}
 	}
 }

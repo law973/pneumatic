@@ -2,24 +2,13 @@
 	@include section-color(var(--bg-color-tools), var(--text-color-black), var(--selection-color-tools), var(--selection-color-text-white));
 
 	#tools_content {
-		/* fallback font-size*/
-		font-size: 3em;
-		font-size: 1.25vmax;
 		max-height: 100%;
 		background-color: var(--content-color-tools);
 		margin: 50px 0;
-		padding: 0 25px;
-		border: 3px solid var(--outline-color-tools);
-		border-radius: 25px;
-		box-shadow: var(--smooth-shadow);
-		transition: 
-			background-color 0.75s ease, 
-			border 0.75s ease,
-			box-shadow 0.75s ease;
+		border-color: var(--outline-color-tools);
 
 		.tools_icon {
-			fill: var(--icon-color-tools);
-			transition: fill 0.75s ease;
+			fill: var(--outline-color-tools);
 		}
 
 		#form_tdee {
