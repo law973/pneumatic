@@ -2,112 +2,112 @@
 $font-stack: 'Nunito', sans-serif;
 
 :root {
+	--bg-color-diet: #06d6a0;
+	--bg-color-exercise: #880d1e;
+	--bg-color-footer: var(--bg-color-main);
+	--bg-color-main: #0000ff;
+	--bg-color-nav: rgba(0, 0, 255, 0.5);
+	--bg-color-recovery: #bbbdf6;
+	--bg-color-tools: #fec601;
+	--content-color-diet: #9cfce3;
+	--content-color-exercise: #5d0914;
+	--content-color-intro: #00008f;
+	--content-color-recovery: #ededfd;
+	--content-color-tools: #fee485;
 	--elevation-color-one: none;
-	--navigation-color-icon: #fff;
+	--form-color-border: #000;
+	--form-color-button: #0000ff;
+	--form-color-error: #b00020;
+	--form-color-radio-accent: #0000ff;
+	--form-color-radio-bg: #fff;
+	--form-color-radio-border: #000;
+	--icon-color-black: #000;
+	--icon-color-white: #fff;
 	--navigation-color-hover: #ebebeb;
+	--navigation-color-icon: #fff;
+	--outline-color-diet: #000;
+	--outline-color-exercise: #fff;
+	--outline-color-intro: #fff;
+	--outline-color-recovery: #000;
+	--outline-color-tools: #000;
 	--scrollbar-color-thumb: #fff;
 	--scrollbar-color-thumb-hover: #ebebeb;
 	--scrollbar-color-track: #0000ff;
-	--bg-color-main: #0000ff;
-	--bg-color-diet: #06d6a0;
-	--bg-color-exercise: #880d1e;
-	--bg-color-recovery: #bbbdf6;
-	--bg-color-tools: #fec601;
-	--bg-color-nav: rgba(0, 0, 255, 0.5);
-	--bg-color-footer: var(--bg-color-main);
-	--text-color-white: #fff;
-	--text-color-black: #000;
-	--text-color-pneumatic: #fff;
-	--text-color-tooltip: #000;
-	--text-color-link: #fff;
-	--tooltip-color: #fff;
-	--icon-color-white: #fff;
-	--icon-color-black: #000;
-	--outline-color-intro: #fff;
-	--outline-color-diet: #000;
-	--outline-color-exercise: #fff;
-	--outline-color-recovery: #000;
-	--outline-color-tools: #000;
-	--form-color-border: #000;
-	--form-color-radio-border: #000;
-	--form-color-radio-bg: #fff;
-	--form-color-radio-accent: #0000ff;
-	--form-color-error: #b00020;
-	--form-color-button: #0000ff;
-	--slider-color-background: #fff;
-	--slider-color-thumb: #0000ff;
-	--content-color-intro: #00008f;
-	--content-color-diet: #9cfce3;
-	--content-color-exercise: #5d0914;
-	--content-color-recovery: #ededfd;
-	--content-color-tools: #fee485;
-	--selection-color-main: #fff;
-	--selection-color-intro: #add8e6;
 	--selection-color-diet: #006400;
 	--selection-color-exercise: #f08080;
+	--selection-color-intro: #add8e6;
+	--selection-color-main: #fff;
 	--selection-color-recovery: #800080;
-	--selection-color-tools: #b8860b;
+	--selection-color-text-black: #000;
 	--selection-color-text-blue: #0000ff;
 	--selection-color-text-white: #fff;
-	--selection-color-text-black: #000;
+	--selection-color-tools: #b8860b;
+	--slider-color-background: #fff;
+	--slider-color-thumb: #0000ff;
 	--smooth-shadow: 
-	1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
-	3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
-	6.8px 6.8px 7.7px rgba(0, 0, 0, 0.032),
-	11.2px 11.2px 12.8px rgba(0, 0, 0, 0.038),
-	18.5px 18.5px 21.2px rgba(0, 0, 0, 0.044),
-	32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
-	70px 70px 80px rgba(0, 0, 0, 0.07);
+		1.6px 1.6px 1.9px rgba(0, 0, 0, 0.018),
+		3.8px 3.8px 4.3px rgba(0, 0, 0, 0.026),
+		6.8px 6.8px 7.7px rgba(0, 0, 0, 0.032),
+		11.2px 11.2px 12.8px rgba(0, 0, 0, 0.038),
+		18.5px 18.5px 21.2px rgba(0, 0, 0, 0.044),
+		32.4px 32.4px 37px rgba(0, 0, 0, 0.052),
+		70px 70px 80px rgba(0, 0, 0, 0.07);
+	--text-color-black: #000;
+	--text-color-link: #fff;
+	--text-color-pneumatic: #fff;
+	--text-color-tooltip: #000;
+	--text-color-white: #fff;
+	--tooltip-color: #fff;
 }
 
 [data-theme="dark"] {
+	--bg-color-diet: #121212;
+	--bg-color-exercise: #121212;
+	--bg-color-footer: var(--elevation-color-one);
+	--bg-color-main: #121212;
+	--bg-color-nav: var(--elevation-color-one);
+	--bg-color-recovery: #121212;
+	--bg-color-tools: #121212;
+	--content-color-diet: var(--elevation-color-one);
+	--content-color-exercise: var(--elevation-color-one);
+	--content-color-intro: var(--elevation-color-one);
+	--content-color-recovery: var(--elevation-color-one);
+	--content-color-tools: var(--elevation-color-one);
 	--elevation-color-one: #1e1e1e;
-	--navigation-color-icon: #d7dadc;
+	--form-color-border: #000;
+	--form-color-button: #3700b3;
+	--form-color-error: #CF6679;
+	--form-color-radio-accent: #bb86fc;
+	--form-color-radio-bg: #fff;
+	--form-color-radio-border: #000;	
+	--icon-color-black: #000;
+	--icon-color-white: #d7dadc;
 	--navigation-color-hover: #bb86fc;
+	--navigation-color-icon: #d7dadc;
+	--outline-color-diet: #05c793;
+	--outline-color-exercise: #f37c8c;
+	--outline-color-intro: #9999ff;
+	--outline-color-recovery: #a4a6f4;
+	--outline-color-tools: #cb9f01;
 	--scrollbar-color-thumb: #d7dadc;
 	--scrollbar-color-thumb-hover: #bb86fc;
 	--scrollbar-color-track: #1e1e1e;
-	--bg-color-main: #121212;
-	--bg-color-diet: #121212;
-	--bg-color-exercise: #121212;
-	--bg-color-recovery: #121212;
-	--bg-color-tools: #121212;
-	--bg-color-nav: var(--elevation-color-one);
-	--bg-color-footer: var(--elevation-color-one);
-	--text-color-white: #d7dadc;
-	--text-color-black: #d7dadc;
-	--text-color-pneumatic: #bb86fc;
-	--text-color-tooltip: #121212;
-	--text-color-link: #bb86fc;
-	--tooltip-color: #d7dadc;
-	--icon-color-white: #d7dadc;
-	--icon-color-black: #000;
-	--outline-color-intro: #9999ff;
-	--outline-color-diet: #05c793;
-	--outline-color-exercise: #f37c8c;
-	--outline-color-recovery: #a4a6f4;
-	--outline-color-tools: #cb9f01;
-	--form-color-border: #000;
-	--form-color-radio-border: #000;
-	--form-color-radio-bg: #fff;
-	--form-color-radio-accent: #bb86fc;
-	--form-color-error: #CF6679;
-	--form-color-button: #3700b3;
-	--slider-color-background: #d7dadc;
-	--slider-color-thumb: #3700b3;
-	--content-color-intro: var(--elevation-color-one);
-	--content-color-diet: var(--elevation-color-one);
-	--content-color-exercise: var(--elevation-color-one);
-	--content-color-recovery: var(--elevation-color-one);
-	--content-color-tools: var(--elevation-color-one);
-	--selection-color-main: #bb86fc;
-	--selection-color-intro: #bb86fc;
 	--selection-color-diet: #bb86fc;
 	--selection-color-exercise: #bb86fc;
+	--selection-color-intro: #bb86fc;
+	--selection-color-main: #bb86fc;
 	--selection-color-recovery: #bb86fc;
-	--selection-color-tools: #bb86fc;
+	--selection-color-text-black: #000;
 	--selection-color-text-blue: #000;
 	--selection-color-text-white: #000;
-	--selection-color-text-black: #000;
+	--selection-color-tools: #bb86fc;
+	--slider-color-background: #d7dadc;
+	--slider-color-thumb: #3700b3;
 	--smooth-shadow: none;
+	--text-color-black: #d7dadc;
+	--text-color-link: #bb86fc;
+	--text-color-pneumatic: #bb86fc;
+	--text-color-tooltip: #121212;
+	--text-color-white: #d7dadc;
+	--tooltip-color: #d7dadc;
 }

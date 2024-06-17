@@ -4,8 +4,8 @@ footer {
 	transition: background-color 0.75s ease;
 
     a {
+        color: var(--text-color-link);
         text-decoration: none;
-		color: var(--text-color-link);
 		transition: color 0.75s ease;
 
         i {

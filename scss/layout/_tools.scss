@@ -2,10 +2,10 @@
 	@include section-color(var(--bg-color-tools), var(--text-color-black), var(--selection-color-tools), var(--selection-color-text-white));
 
 	#tools_content {
-		max-height: 100%;
 		background-color: var(--content-color-tools);
-		margin: 50px 0;
 		border-color: var(--outline-color-tools);
+		margin: 50px 0;
+		max-height: 100%;
 
 		.tools_icon {
 			fill: var(--outline-color-tools);
@@ -16,12 +16,12 @@
 			flex-direction: column;
 		
 			fieldset {
-				text-align: left;
-				font-weight: bold;
-				width: fit-content;
-				border-radius: 5px;
 				border-color: var(--outline-color-tools);
+				border-radius: 5px;
+				font-weight: bold;
+				text-align: left;
 				transition: border 0.75s ease;
+				width: fit-content;
 			}
 		}
 
@@ -31,8 +31,8 @@
 		
 			p {
 				font-size: 1rem;
-				width: 40px;
 				text-align: center;
+				width: 40px;
 			}
 		}
 
@@ -42,9 +42,9 @@
 		}
 
 		.slide-container {
-			width: 100%;
 			display: flex;
 			flex-direction: column;
+			width: 100%;
 		
 			label span {
 				font-weight: normal;
@@ -52,34 +52,34 @@
 
 			.slider {
 				appearance: none;
-				width: 100%;
-				height: 24px;
 				background: var(--slider-color-background);
 				border-radius: 12px;
 				cursor: pointer;
+				height: 24px;
 				transition: background 0.75s ease;
+				width: 100%;
 
 				&::-webkit-slider-thumb {
 					appearance: none;
-					width: 20px;
-					height: 48px;
 					background: var(--slider-color-thumb);
-					border-radius: 10px;
 					border: 2px solid white;
-					outline: 1px solid black;
+					border-radius: 10px;
 					cursor: pointer;
+					height: 48px;
+					outline: 1px solid black;
 					transition: background 0.75s ease;
+					width: 20px;
 				}
 
 				&::-moz-range-thumb {
-					width: 20px;
-					height: 48px;
 					background: var(--slider-color-thumb);
-					border-radius: 10px;
 					border: 2px solid white;
-					outline: 1px solid black;
+					border-radius: 10px;
 					cursor: pointer;
+					height: 48px;
+					outline: 1px solid black;
 					transition: background 0.75s ease;
+					width: 20px;
 				}
 			}
 		}
@@ -87,23 +87,23 @@
 		input {
 			&[type="radio"] {
 				accent-color: var(--form-color-radio-accent);
-				transform: scale(1.5);
 				cursor: pointer;
+				transform: scale(1.5);
 			}
 		
 			&[type="submit"] {
-				font-family: inherit;
-				font-size: 1.5rem;
-				text-align: left;
-				width: min-content;
 				background-color: var(--form-color-button);
-				color: white;
-				margin-top: -30px;
-				padding: 5px 152px 5px 10px;
 				border: 2px solid white;
 				border-radius: 5px;
-				outline: 1px solid black;
+				color: white;
 				cursor: pointer;
+				font-family: inherit;
+				font-size: 1.5rem;
+				margin-top: -30px;
+				outline: 1px solid black;
+				padding: 5px 152px 5px 10px;
+				text-align: left;
+				width: min-content;
 		
 				&:hover {
 					background-color: #1f1fff;
@@ -112,8 +112,8 @@
 		
 				&:active {
 					background-color: #9999ff;
-					color: black;
 					border: 2px solid black;
+					color: black;
 					outline: 1px solid black;
 					transform: scale(0.95);
 				}
@@ -121,8 +121,8 @@
 				&:not(:hover), &:not(:active) {
 					transition: 
 						background-color 0.75s ease, 
-						color 0.75s ease, 
-						border 0.75s ease, 
+						border 0.75s ease,
+						color 0.75s ease,
 						outline 0.75s ease;
 				}
 			}
@@ -130,14 +130,14 @@
 		
 		input[type="number"], 
 		select {
+			border: 1px solid var(--form-color-border);
+			border-radius: 5px;
+			box-sizing: border-box;
 			font-family: inherit;
 			font-size: 1rem;
-			width: 100%;
 			margin-bottom: 5px;
 			padding: 7px;
-			border-radius: 5px;
-			border: 1px solid var(--form-color-border);
-			box-sizing: border-box;
+			width: 100%;
 		}
 		
 		input:invalid {

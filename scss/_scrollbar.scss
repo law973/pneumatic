@@ -8,9 +8,9 @@
 }
   
 ::-webkit-scrollbar-thumb {
-	min-height: 40px;
-	background: var(--scrollbar-color-thumb);
+    background: var(--scrollbar-color-thumb);
 	border-radius: 5px;
+	min-height: 40px;
 
     &:hover {
         background: var(--scrollbar-color-thumb-hover);
